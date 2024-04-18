@@ -1,0 +1,3444 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Driverworks Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js"></script>
+
+  </head>
+
+  <body class="index" data-languages="[&quot;lua&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-3056e635.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="lua">lua</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#license-copyright-and-trademark" class="toc-h1 toc-link" data-title="License, Copyright, and Trademark">License, Copyright, and Trademark</a>
+          </li>
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#introduction-proxies-commands" class="toc-h2 toc-link" data-title="Proxies (Commands)">Proxies (Commands)</a>
+                  </li>
+                  <li>
+                    <a href="#introduction-protocol-notifications" class="toc-h2 toc-link" data-title="Protocol (Notifications)">Protocol (Notifications)</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#what-s-new" class="toc-h1 toc-link" data-title="What’s New">What’s New</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-4-1" class="toc-h2 toc-link" data-title="What’s New in 3.4.1">What’s New in 3.4.1</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-4-0" class="toc-h2 toc-link" data-title="What’s New in 3.4.0">What’s New in 3.4.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-3-2" class="toc-h2 toc-link" data-title="What’s New in 3.3.2">What’s New in 3.3.2</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-3-1" class="toc-h2 toc-link" data-title="What’s New in 3.3.1">What’s New in 3.3.1</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-3-0" class="toc-h2 toc-link" data-title="What’s New in 3.3.0">What’s New in 3.3.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-3" class="toc-h2 toc-link" data-title="What’s New in 3.2.3">What’s New in 3.2.3</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-2" class="toc-h2 toc-link" data-title="What’s New in 3.2.2">What’s New in 3.2.2</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-1" class="toc-h2 toc-link" data-title="What’s New in 3.2.1">What’s New in 3.2.1</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-0" class="toc-h2 toc-link" data-title="What’s New in 3.2.0">What’s New in 3.2.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-was-new-in-3-1-2" class="toc-h2 toc-link" data-title="What was New in 3.1.2">What was New in 3.1.2</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-was-new-in-3-1-0" class="toc-h2 toc-link" data-title="What was New in 3.1.0">What was New in 3.1.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-was-new-in-o-s-3" class="toc-h2 toc-link" data-title="What was New in O.S.3">What was New in O.S.3</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-proxy-terminology" class="toc-h1 toc-link" data-title="Intercom Proxy Terminology">Intercom Proxy Terminology</a>
+          </li>
+          <li>
+            <a href="#intercom-proxy-best-practices" class="toc-h1 toc-link" data-title="Intercom Proxy Best Practices">Intercom Proxy Best Practices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-proxy-best-practices-overview" class="toc-h2 toc-link" data-title="Overview">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-best-practices-storing-session-ids" class="toc-h2 toc-link" data-title="Storing Session IDs">Storing Session IDs</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-best-practices-using-the-remoteaor-property" class="toc-h2 toc-link" data-title="Using the RemoteAor Property">Using the RemoteAor Property</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-proxy-settings" class="toc-h1 toc-link" data-title="Intercom Proxy Settings">Intercom Proxy Settings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-proxy-settings-exclude-from-navigator" class="toc-h2 toc-link" data-title="Exclude from Navigator">Exclude from Navigator</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-do-not-disturb" class="toc-h2 toc-link" data-title="Do Not Disturb">Do Not Disturb</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-auto-answer" class="toc-h2 toc-link" data-title="Auto Answer">Auto Answer</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-send-video" class="toc-h2 toc-link" data-title="Send Video">Send Video</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-monitor-mode" class="toc-h2 toc-link" data-title="Monitor Mode">Monitor Mode</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-ringer-volume" class="toc-h2 toc-link" data-title="Ringer Volume">Ringer Volume</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-speaker-volume" class="toc-h2 toc-link" data-title="Speaker Volume">Speaker Volume</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-microphone-gain" class="toc-h2 toc-link" data-title="Microphone Gain">Microphone Gain</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-camera-enabled" class="toc-h2 toc-link" data-title="Camera Enabled">Camera Enabled</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-aec-enabled" class="toc-h2 toc-link" data-title="AEC Enabled">AEC Enabled</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-proxy-settings-play-door-chime" class="toc-h2 toc-link" data-title="Play Door Chime">Play Door Chime</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-call-commands" class="toc-h1 toc-link" data-title="Intercom Call Commands">Intercom Call Commands</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-call-commands-accept_call" class="toc-h2 toc-link" data-title="ACCEPT_CALL">ACCEPT_CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-end_call" class="toc-h2 toc-link" data-title="END_CALL">END_CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-mute_call" class="toc-h2 toc-link" data-title="MUTE_CALL">MUTE_CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-pause_call" class="toc-h2 toc-link" data-title="PAUSE_CALL">PAUSE_CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-play_door_-chime" class="toc-h2 toc-link" data-title="PLAY_DOOR_ CHIME">PLAY_DOOR_ CHIME</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-reject_call" class="toc-h2 toc-link" data-title="REJECT_CALL">REJECT_CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-resume_call" class="toc-h2 toc-link" data-title="RESUME_CALL">RESUME_CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-start-_call" class="toc-h2 toc-link" data-title="START _CALL">START _CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-commands-start_monitor_call" class="toc-h2 toc-link" data-title="START_MONITOR_CALL">START_MONITOR_CALL</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-call-requests" class="toc-h1 toc-link" data-title="Intercom Call Requests">Intercom Call Requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-call-requests-get_device" class="toc-h2 toc-link" data-title="GET_DEVICE">GET_DEVICE</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-requests-get_device_list" class="toc-h2 toc-link" data-title="GET_DEVICE_LIST">GET_DEVICE_LIST</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-requests-get_session" class="toc-h2 toc-link" data-title="GET_SESSION">GET_SESSION</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-requests-get_session_list" class="toc-h2 toc-link" data-title="GET_SESSION_LIST">GET_SESSION_LIST</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-requests-get_timeout" class="toc-h2 toc-link" data-title="GET_TIMEOUT">GET_TIMEOUT</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-call-notifications" class="toc-h1 toc-link" data-title="Intercom Call Notifications">Intercom Call Notifications</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-call-notifications-call_accepted" class="toc-h2 toc-link" data-title="CALL_ACCEPTED">CALL_ACCEPTED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-notifications-call_ended" class="toc-h2 toc-link" data-title="CALL_ENDED">CALL_ENDED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-notifications-camera_enabled_change" class="toc-h2 toc-link" data-title="CAMERA_ENABLED_CHANGE">CAMERA_ENABLED_CHANGE</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-notifications-call_paused" class="toc-h2 toc-link" data-title="CALL_PAUSED">CALL_PAUSED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-notifications-call_rejected" class="toc-h2 toc-link" data-title="CALL_REJECTED">CALL_REJECTED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-notifications-call_resumed" class="toc-h2 toc-link" data-title="CALL_RESUMED">CALL_RESUMED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-notifications-incoming_call" class="toc-h2 toc-link" data-title="INCOMING_CALL">INCOMING_CALL</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-call-notifications-outgoing_call" class="toc-h2 toc-link" data-title="OUTGOING_CALL">OUTGOING_CALL</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-state-commands" class="toc-h1 toc-link" data-title="Intercom State Commands">Intercom State Commands</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-state-commands-set_camera_enable" class="toc-h2 toc-link" data-title="SET_CAMERA_ENABLE">SET_CAMERA_ENABLE</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-commands-set-dnd" class="toc-h2 toc-link" data-title="SET DND">SET DND</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-commands-set_exclude_from_navigator" class="toc-h2 toc-link" data-title="SET_EXCLUDE_FROM_NAVIGATOR">SET_EXCLUDE_FROM_NAVIGATOR</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-commands-set_send_video" class="toc-h2 toc-link" data-title="SET_SEND_VIDEO">SET_SEND_VIDEO</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-commands-set_microphone_gain" class="toc-h2 toc-link" data-title="SET_MICROPHONE_GAIN">SET_MICROPHONE_GAIN</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-commands-set_monitor_mode" class="toc-h2 toc-link" data-title="SET_MONITOR_MODE">SET_MONITOR_MODE</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-commands-set_ringer_volume" class="toc-h2 toc-link" data-title="SET_RINGER_VOLUME">SET_RINGER_VOLUME</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-commands-set_speaker_volume" class="toc-h2 toc-link" data-title="SET_SPEAKER_VOLUME">SET_SPEAKER_VOLUME</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-state-requests" class="toc-h1 toc-link" data-title="Intercom State Requests">Intercom State Requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-state-requests-get_current_state" class="toc-h2 toc-link" data-title="GET_CURRENT_STATE">GET_CURRENT_STATE</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-requests-get_state" class="toc-h2 toc-link" data-title="GET_STATE">GET_STATE</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-requests-get_state_list" class="toc-h2 toc-link" data-title="GET_STATE_LIST">GET_STATE_LIST</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-state-notifications" class="toc-h1 toc-link" data-title="Intercom State Notifications">Intercom State Notifications</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-state-notifications-auto_answer_changed" class="toc-h2 toc-link" data-title="AUTO_ANSWER_CHANGED">AUTO_ANSWER_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-camera_enabled_changed" class="toc-h2 toc-link" data-title="CAMERA_ENABLED_CHANGED">CAMERA_ENABLED_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-current_state_changed" class="toc-h2 toc-link" data-title="CURRENT_STATE_CHANGED">CURRENT_STATE_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-device_state_changed" class="toc-h2 toc-link" data-title="DEVICE_STATE_CHANGED">DEVICE_STATE_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-device_state_changed" class="toc-h2 toc-link" data-title="DEVICE_STATE_CHANGED">DEVICE_STATE_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-exclude_from_navigator_changed" class="toc-h2 toc-link" data-title="EXCLUDE_FROM_NAVIGATOR_CHANGED">EXCLUDE_FROM_NAVIGATOR_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-microphone_gain_changed" class="toc-h2 toc-link" data-title="MICROPHONE_GAIN_CHANGED">MICROPHONE_GAIN_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-monitor_mode_changed" class="toc-h2 toc-link" data-title="MONITOR_MODE_CHANGED">MONITOR_MODE_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-mute_audio_changed" class="toc-h2 toc-link" data-title="MUTE_AUDIO_CHANGED">MUTE_AUDIO_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-ringer_volume_changed" class="toc-h2 toc-link" data-title="RINGER_VOLUME_CHANGED">RINGER_VOLUME_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-sip_username_changed" class="toc-h2 toc-link" data-title="SIP_USERNAME_CHANGED">SIP_USERNAME_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-send_video_changed" class="toc-h2 toc-link" data-title="SEND_VIDEO_CHANGED">SEND_VIDEO_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-speaker_volume_changed" class="toc-h2 toc-link" data-title="SPEAKER_VOLUME_CHANGED">SPEAKER_VOLUME_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-state-notifications-use_camera_changed" class="toc-h2 toc-link" data-title="USE_CAMERA_CHANGED">USE_CAMERA_CHANGED</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-call-group-requests" class="toc-h1 toc-link" data-title="Intercom Call Group Requests">Intercom Call Group Requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-call-group-requests-get_group_list" class="toc-h2 toc-link" data-title="GET_GROUP_LIST">GET_GROUP_LIST</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-capabilities" class="toc-h1 toc-link" data-title="Intercom Capabilities">Intercom Capabilities</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-capabilities-has_play_door_chime" class="toc-h2 toc-link" data-title="has_play_door_chime">has_play_door_chime</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_camera" class="toc-h2 toc-link" data-title="has_camera">has_camera</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_display" class="toc-h2 toc-link" data-title="has_display">has_display</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_buttons" class="toc-h2 toc-link" data-title="has_buttons">has_buttons</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-is_doorstation" class="toc-h2 toc-link" data-title="is_doorstation">is_doorstation</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-driver_arch_type" class="toc-h2 toc-link" data-title="driver_arch_type">driver_arch_type</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_auto_answer" class="toc-h2 toc-link" data-title="has_auto_answer">has_auto_answer</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_do_-not_disturb" class="toc-h2 toc-link" data-title="has_do_ not_disturb">has_do_ not_disturb</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_early_media" class="toc-h2 toc-link" data-title="has_early_media">has_early_media</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_monitor_mode" class="toc-h2 toc-link" data-title="has_monitor_mode">has_monitor_mode</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-use_microphone" class="toc-h2 toc-link" data-title="use_microphone">use_microphone</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-use_speaker" class="toc-h2 toc-link" data-title="use_speaker">use_speaker</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-use_ringer" class="toc-h2 toc-link" data-title="use_ringer">use_ringer</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_high_definition" class="toc-h2 toc-link" data-title="has_high_definition">has_high_definition</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_echo_calibration" class="toc-h2 toc-link" data-title="has_echo_calibration">has_echo_calibration</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-audio_codecs_supported" class="toc-h2 toc-link" data-title="audio_codecs_supported">audio_codecs_supported</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_intercom" class="toc-h2 toc-link" data-title="has_intercom">has_intercom</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_video_intercom" class="toc-h2 toc-link" data-title="has_video_intercom">has_video_intercom</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-has_mcast_emedia" class="toc-h2 toc-link" data-title="has_mcast_emedia">has_mcast_emedia</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-can_change_multicast_ip" class="toc-h2 toc-link" data-title="can_change_multicast_ip">can_change_multicast_ip</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-can_change_transport" class="toc-h2 toc-link" data-title="can_change_transport">can_change_transport</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-video_codecs_supported" class="toc-h2 toc-link" data-title="video_codecs_supported">video_codecs_supported</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-can_set_aec" class="toc-h2 toc-link" data-title="can_set_aec">can_set_aec</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-number_ring_buttons" class="toc-h2 toc-link" data-title="number_ring_buttons">number_ring_buttons</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-can_detect_button_press" class="toc-h2 toc-link" data-title="can_detect_button_press">can_detect_button_press</a>
+                  </li>
+                  <li>
+                    <a href="#intercom-capabilities-can_detect_button_release" class="toc-h2 toc-link" data-title="can_detect_button_release">can_detect_button_release</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-events" class="toc-h1 toc-link" data-title="Intercom Events">Intercom Events</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-events-intercom-events" class="toc-h2 toc-link" data-title="Intercom Events">Intercom Events</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-variables" class="toc-h1 toc-link" data-title="Intercom Variables">Intercom Variables</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-variables-intercom-variables" class="toc-h2 toc-link" data-title="Intercom Variables">Intercom Variables</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#intercom-conditionals" class="toc-h1 toc-link" data-title="Intercom Conditionals">Intercom Conditionals</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intercom-conditionals-intercom-conditionals" class="toc-h2 toc-link" data-title="Intercom Conditionals">Intercom Conditionals</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='license-copyright-and-trademark'>License, Copyright, and Trademark</h1>
+
+<p>The content contained in this repository is the intellectual property of Snap One, LLC, (formerly known as Wirepath Home Systems, LLC), and use without a valid license from Snap One is strictly prohibited. The user of this repository shall keep all content contained herein confidential and shall protect this content in whole or in part from disclosure to any and all third parties except as specifically authorized in writing by Snap One.</p>
+
+<p><strong>License and Intellectual Property Disclaimer</strong></p>
+
+<p>The content in this repository is provided in connection with Snap One products. No license, express or implied, by estoppal or otherwise, to any intellectual property rights is granted by this document or in this repository. Except as provided in Snap Oneʼs terms and conditions for the license of such products, Snap One and its affiliates assume no liability whatsoever and disclaim any express or implied warranty, relating to the sale and/or use of Snap One products including liability or warranties relating to fitness for a particular purpose, merchantability, or infringement of any patent, copyright or other intellectual property right. Snap One products are not intended for use in medical, lifesaving, or life sustaining applications.</p>
+
+<p>Information regarding third-party products is provided solely for educational purposes. Snap One is not responsible for the performance or support of third-party products and does not make any representations or warranties whatsoever regarding the quality, reliability, functionality or compatibility of these products. The reader is advised that third parties can have intellectual property rights that can be relevant to this repository and the technologies discussed herein, and is advised to seek the advice of competent legal counsel regarding the intellectual property rights of third parties, without obligation of Snap One.</p>
+
+<p>Snap One retains the right make changes to this repository or related product specifications and descriptions in this repository, at any time, without notice. Snap One makes no warranty for the use of this repository and assumes no responsibility for any errors that can appear in the repository nor does it make a commitment to update the content contained herein.</p>
+
+<p><strong>Copyright</strong></p>
+
+<p>Copyright 2023 Snap One, LLC. All rights reserved.</p>
+
+<p>The above copyright notice applies to all content in this repository unless otherwise stated explicitly herein that a third-party’s copyright applies.</p>
+
+<p>No part of this publication may be reproduced, photocopied, stored on a retrieval system, or transmitted without the express written consent of the publisher.</p>
+
+<p><strong>Trademarks</strong></p>
+
+<p>Snap One and Snap One Logo, Control4 and the Control4 logo, and DriverWorks are trademarks or registered trademarks of  Snap One, LLC. Other product and company names mentioned in this repository may be the trademarks or registered trademarks of their respective owners.</p>
+
+<p><strong> Derivative Works</strong></p>
+
+<p>To the extent that you create any “Derivative Work” (meaning any work that is based upon one or more preexisting versions of the work provided to you in this repository, such as an enhancement or modification, revision, translation, abridgement, condensation, expansion, collection, compilation or any other form in which such preexisting works may be recast, modified, transformed or adapted, explicitly including without limitation, any updates or changes to Snap One, LLC’s software code or intellectual property) such Derivative Work shall be owned by Snap One, LLC and all right, title and interest in and to each such Derivative Work shall automatically vest in Snap One, LLC. To the extent any Derivative Work does not automatically vest in Snap One, LLC by operation of law, you hereby assign such Derivative Work to Snap One, LLC with full title guarantee. Snap One, LLC shall have no obligation to grant you any right in any such Derivative Work.</p>
+
+<p><strong>Contact Us</strong></p>
+
+<p>Snap One, LLC
+11734 S. Election Road
+Salt Lake City, UT 84020 USA</p>
+
+<p><a href="www.control4.com">http://www.control4.com</a></p>
+<h1 id='introduction'>Introduction</h1>
+
+<h2 id='introduction-proxies-commands'>Proxies (Commands)</h2>
+
+<p>A proxy driver is an interface to the Control4 system for a set of devices that share common functionality. For instance, most DVD disc changers have common controls such as PLAY, STOP, PAUSE and FAST FORWARD.  The disc changer proxy allows for a common user interface to control all disc changers.  The Control4 system (Director) sends information to and receives information from the proxy drivers.  The proxy drivers send information to and receives information from the protocol drivers.
+Remember, your DriverWorks driver interacts with the proxy driver which then interacts with the system.  As a driver developer you will be relying on this proxy to provide status (notification) to the Control4 system for the device you are controlling.  You will also receive commands from the system that you will act on to control the device.  These commands and notifications are at the heart of what you will be implementing in your driver.  Essentially your driver is becoming the go-between from the Control4 system and your device with the proxy driver giving structure to the commands and notifications which you will be implementing.
+Your driver can facilitate communications with multiple types of proxies for a single device. As an example, a Security System driver will utilize both the Security proxy and the Contacts proxy. These additional proxies are configured in the &lt;connections&gt; section of the .c4z.</p>
+
+<h2 id='introduction-protocol-notifications'>Protocol (Notifications)</h2>
+
+<p>Two similar devices may have the same functionality but utilize a very different command set.  A protocol driver provides the device-specific information needed to communicate with the Control4 system.  In the case of DriverWorks, the DriverWorks driver is the protocol driver.  When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.  In the case of DriverWorks, the DriverWorks driver is the protocol driver. When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.</p>
+<h1 id='what-s-new'>What’s New</h1>
+
+<h2 id='what-s-new-what-s-new-in-3-4-1'>What’s New in 3.4.1</h2>
+
+<p>There were no modifications to the Proxy and Protocol Guide in conjunction with O.S. Release 3.4.1.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-4-0'>What’s New in 3.4.0</h2><h3 id='what-s-new-what-s-new-in-3-4-0-blind-proxy'>Blind Proxy</h3>
+<p>A new capability has been added to the proxy called <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#blind-capabilities-always_send_level">always_send_level</a>. If value is true, then the SetTargetLevel commands are always sent regardless of current level values. This is useful if the blind device does not support two-way communication and is controlled outside of the Control4 operating system. </p>
+<h3 id='what-s-new-what-s-new-in-3-4-0-camera-proxy'>Camera Proxy</h3>
+<p>Beginning with O.S. 3.4.0, camera drivers have the ability to distribute audio to devices running Navigator. If a camera supports the proper <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-audio-distribution">CODEC</a> and the camera microphone has been enabled in the appropriate interface a new audio button will appear at the bottom of the single-camera view. This will allow the user to hear live audio with the live video.</p>
+<h3 id='what-s-new-what-s-new-in-3-4-0-generic-media-player-proxy'>Generic Media Player Proxy</h3>
+<p>A new capability has been added to the proxy called <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#generic-media-player-capabilities-allow_audio_pathing">allow_audio_pathing</a>. This capability is applicable in the scenario where the AV Switch proxy is included as a secondary proxy to the Generic Media Player Proxy. It is useful  when modeling streaming media devices that require minidrivers.</p>
+<h3 id='what-s-new-what-s-new-in-3-4-0-light-v2-proxy'>Light (v2) Proxy</h3>
+<p>The following color conversion functions have been modified in 3.4.0. The gamut parameter now receives a new valid string of: &quot;custom”. See the links below for more information.</p>
+
+<p>RGB functions:
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorrgbtoxy">ColorRGBtoXY</a>
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytorgb">ColorXYtoRGB</a></p>
+
+<p>HSV functions:
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorhsvtoxy">ColorHSVtoXY</a>
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytohsv">ColorXYtoHSV</a></p>
+
+<h2 id='what-s-new-what-s-new-in-3-3-2'>What’s New in 3.3.2</h2><h3 id='what-s-new-what-s-new-in-3-3-2-camera-proxy'>Camera Proxy</h3>
+<p><strong>Support for Dynamic Camera Streams</strong></p>
+
+<p>Camera drivers can now implement a new <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">dynamic streams API</a> to provide a list of streams that the Navigators can pick from. </p>
+<h3 id='what-s-new-what-s-new-in-3-3-2-light-v2-proxy'>Light V2 Proxy</h3>
+<p><strong>Capabilities that have been Added</strong></p>
+
+<p>A new feature has been delivered in O.S. 3.3.2 which allows dealers and customers to specify how a light&#39;s brightness behaves when the light is turned on. The functionality includes:</p>
+
+<ul>
+<li>Preset - Light turns on to a preset level.</li>
+<li>Previous - Light turns on to the previous light level.</li>
+<li>Default On - Provided for backwards compatibility and is the same as setting Preset to On.</li>
+</ul>
+
+<p>Driver developers must opt-in to this new feature and which parts it wants to support via the following new capabilities:</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_on-mode_preset">brightness_on_mode_preset</a> has been included to enable the brightness presets for &quot;On Mode&quot; behavior for a light.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_on_mode_previous">brightness_on_mode_previous</a> has been included to enable the Previous On &quot;On Mode&quot; brightness  behavior for a light.</p>
+
+<p>A new feature was created to allow dealers and customers to specify how a light&#39;s color behaves when a light is turned on. The functionality includes:</p>
+
+<ul>
+<li>Color Fade - Color behavior such as Dim to Warm</li>
+<li>Preset - Color changes to a preset.</li>
+<li>Previous - Color changes to the previous color value.</li>
+<li>Default On - Provided for backwards compatibility and is the same as setting Preset to On.</li>
+</ul>
+
+<p>Driver developers must opt-in to this new feature and which parts it wants to support via the following new capabilities:</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_fade">color_on_mode_fade</a> has been included to enable the Fade On &quot;On Mode&quot; behavior, such as Dim to Warm, for a light.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_preset">color_on_mode_preset</a> has been included to enable presets for use with &quot;On Mode&quot; behavior for a light.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_previous">color_on_mode_previous</a> has been included to enable the Previous On &quot;On Mode&quot; behavior for a light.</p>
+
+<p>Additionally,  the following new capabilities have been included in 3.3.2:</p>
+
+<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_rate_max">brightness_rate_max</a> has been included in support of drivers without buttons. This capability allows these driver to no longer need to define click and hold maximum rates.</p>
+
+<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_rate_min">brightness_rate_min</a> has been included in support of drivers without buttons. This capability allows these driver to no longer need to define click and hold minimum rates.</p>
+
+<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_brightness_stop">supports_brightness_stop</a> has been included if a light brightness transition can be stopped during a ramp. </p>
+
+<p><strong>Capabilities that have been Deprecated</strong></p>
+
+<p>fixed_ramp_rate - Use <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_min">click_rate_min</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_max">click_rate_max</a> instead.</p>
+
+<p>has_fixed_ramp_rate - Use <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_min">click_rate_min</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_max">click_rate_max</a> instead.</p>
+
+<p>num_buttons</p>
+
+<p>ramp_level</p>
+
+<p>min_max</p>
+
+<p>on_off</p>
+
+<p>buttons_are_virtual</p>
+
+<p><strong>Commands that have been Added</strong></p>
+
+<p>Note: Enforcement of valid minimum and maximum values for many Light v2 commands are being enforced in conjunction with 3.3.2. </p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-add_driver_color_preset">ADD_DRIVER_COLOR_PRESET</a> has been included to add a new driver specific color preset.</p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-delete_driver_-color_-preset">DELETE_DRIVER_COLOR_PRESET</a> has been added to remove a driver configured color preset. </p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-dynamic_off">DYNAMIC_OFF</a> has been added to support UIs with an off command to pair with the DYNAMIC_ON command.</p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-dynamic_on">DYNAMIC_ON</a> has been added to allows UI&#39;s and programming to &quot;turn on&quot; a light involving both brightness and color in a single command</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-modify_driver_color_preset">MODIFY_DRIVER_COLOR_PRESET</a> has been included to change an existing driver color preset.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_stop">SET_BRIGHTNESS_STOP</a> has been added to stop a ramp if in progress.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_stop">SET_COLOR_STOP</a> has been added to stops a ramp of color if in progress.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_on_mode">SET_BRIGHTNESS_ON_MODE</a> has been added to maintain the On preset value.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_rate_default">SET_BRIGHTNESS_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to retrieve the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_rate_default">UPDATE_BRIGHTNESS_RATE_DEFAULT</a> value.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_on_mode">SET_COLOR_ON_MODE</a>  has beed added define color on mode.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_rate_default">SET_COLOR_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to retrieve the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_rate_default">UPDATE_COLOR_RATE_DEFAULT</a> value.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_on_mode">UPDATE_BRIGHTNESS_ON_MODE</a> has been added to obtain how a light should turn on with regards to brightness.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_rate_default">UPDATE_BRIGHTNESS_RATE_DEFAULT</a> has been added to provide a default value when a rate change is not provided.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_preset">UPDATE_BRIGHTNESS_PRESET</a> has beeb added to send a command when a press is changed.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_on_mode">UPDATE_COLOR_ON_MODE</a> has been added to obtain how a light should turn on with regards to color.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_preset">UPDATE_COLOR_PRESET</a> has been added to manage On and Dim values across various brands and models of lights.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_rate_default">UPDATE_COLOR_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to update the color rate default value.</p>
+
+<p><strong>Commands that have been Modified</strong></p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET</a> command has been enhanced with new parameters to support hue, saturation and presets. Additionally, this command previously included a parameter of RATE. This parameter name has changed to LIGHT_COLOR_TARGET_RATE.</p>
+
+<p><strong>Commands that have been Deprecated</strong></p>
+
+<p>GET_LIGHT_LEVEL </p>
+
+<p>GET_CONNECTED_STATE </p>
+
+<p>GET_PROPERTIES </p>
+
+<p><strong>Conditionals that have been Added</strong></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_BRIGHTNESS</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_BRIGHTNESS_TARGET</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_COLOR_TARGET</a> </p>
+
+<p><strong>Notifications that have been Modified</strong></p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_brightness_changing">LIGHT_BRIGHTNESS_CHANGING</a> notify has been modified to include two new optional parameters: LIGHT_BRIGHTNESS_CURRENT_PRESET_ID and LIGHT_BRIGHTNESS_TARGET_PRESET_ID.</p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changing">LIGHT_COLOR_CHANGING</a> notify has been modified to include parameters for Preset IDs. Additionally, this notify previously included a parameter of RATE. This parameter name has changed to LIGHT_COLOR_TARGET_RATE.</p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changed">LIGHT_COLOR_CHANGED</a> notify has been modified to include a parameter for a Preset ID.</p>
+
+<p><strong>Variables that have been Added</strong></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-variables">Brightness Target Ramp Rate in Milliseconds</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-variables">Brightness Target Rate Remaining in Milliseconds</a></p>
+
+<p><strong>Variables that have been Deprecated</strong></p>
+
+<p>PRESET_LEVEL has been deprecated as the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_on_mode">brightness_on_mode_preset</a> capability contains this value. </p>
+
+<p><strong>Known Issue(s)</strong></p>
+
+<p><em>Color Lighting Control may not Work on Some Drivers</em></p>
+
+<p>Currently, there is a known problem with color control not working on drivers that are looking for a RATE parameter in the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET </a>command. The RATE parameter was not correctly implemented due to the limits of support for color rate ramping in previous versions. We are finalizing the changes to make this fully work in 3.3.2. As a result, the “RATE” parameter name has been changed to “LIGHT_COLOR_TARGET_RATE”.</p>
+
+<p><em>Button Link Binding for Brightness Stop Functionality not Working</em></p>
+
+<p>A defect in 3.3.2 prevents keypad buttons bound to the Proxy’s BUTTON_LINK binding for Brightness Stop from working. This will be resolved in 3.3.3.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-3-1'>What’s New in 3.3.1</h2>
+
+<p><strong>Light V2 Proxy</strong></p>
+
+<p>The capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_trace_tolerance">color_trace_tolerance</a> has been modified to accept a Delta value of &gt; .01. When provided, the CIELa*b* tolerance formula is used to determining if a color is the as another color in the system.</p>
+
+<p>The following Conversion Commands have been enhanced to include an optional parameter: gamut. This parameter allows for the specification of a gamut type for use in the conversions.</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorhsvtoxy">ColorHSVtoXY</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytohsv">ColorXYtoHSV</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorrgbtoxy">ColorRGBtoXY</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytorgb">ColorXYtoRGB</a></li>
+</ul>
+
+<p><strong>Camera Proxy</strong></p>
+
+<p>The Camera Proxy documentation has been has enhanced to include new information regarding:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Camera Streams</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Driver Support for Multiple Streams</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Support for Caching URLS</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-extras-interface-library">Support for The Extras Interface Library</a> </li>
+</ul>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-get_stream_urls">GET_STREAM_URLS</a> has been added. It is used to obtain URLs for a camera that does not have a constant URL like a Cloud based camera or for cameras that have a wider range of features and configurable options that can produce better customer experiences using various client</p>
+
+<p>A new notification: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-protocol-notifications-stream_urls_ready">STREAM_URLS_READY</a> has been added. This notify is used as a follow up to a GET_STREAM_URLS Synchronous call. This Notify will let a UI know that the URL information they requested is ready. </p>
+
+<p>New capabilities added to the Camera proxy include:  </p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-dynamic_urls_use_type">dynamic_urls_use_type</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-requires_dynamic_stream_urls">requires_dynamic_stream_urls</a></li>
+</ul>
+
+<p>Dynamic Presets are now supported within the Camera Proxy.  The following preset functionality has been include: </p>
+
+<ul>
+<li>Save new presets.</li>
+<li>Change preset name.</li>
+<li>Recapture/update existing preset.</li>
+<li>Reorder presets.</li>
+<li>Delete a preset.</li>
+</ul>
+
+<p>Dynamic Presets require the following new Capability:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_dynamic_presets">has_dynamic_presets</a></li>
+</ul>
+
+<p>Dynamic Presets require the following new Notifications:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-protocol-notifications-dynamic_urls_changed">DYNAMIC_URLS_CHANGED</a></li>
+</ul>
+
+<p>Dynamic Presets require the following new Commands:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-select_preset">SELECT_PRESET</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-change_preset_name">CHANGE_PRESET_NAME</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-modify_preset">MODIFY_PRESET</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-delete_preset">DELETE_PRESET</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-change_preset_order">CHANGE_PRESET_ORDER</a></li>
+</ul>
+
+<p>The following existing Camera Proxy capabilities are now Dynamic Capabilities:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_-pan">has_pan</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_tilt">has_tilt</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_zoom">has_zoom</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_home">has_home</a></li>
+</ul>
+
+<h2 id='what-s-new-what-s-new-in-3-3-0'>What’s New in 3.3.0</h2><h3 id='what-s-new-what-s-new-in-3-3-0-light-proxy-color-enhancements'>Light Proxy Color Enhancements</h3>
+<p>This release of the 3.3.0 beta Proxy and Protocol Guide has been delivered to support the Light Proxy’s new color management functionality. This includes:</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-capabilities'>Light V2 Proxy Capabilities</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_correlated_temperature_max">color_correlated_temperature_max</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_correlated_temperature_min">color_correlated_temperature_min</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_behavior">color_rate_behavior</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_max">color_rate_max</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_min">color_rate_min</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_trace_tolerance">color_trace_tolerance</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_color">supports_color</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_color_correlated_temperature">supports_color_correlated_temperature</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-commands'>Light V2 Proxy Commands</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-conversion-commands'>Light V2 Proxy Conversion Commands</h3>
+<p>This section lists the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands">Commands</a> used for converting to/from hue, saturation and lightness (HSV) and red, blue and green (RGB).</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-conditionals'>Light V2 Proxy Conditionals</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_COLOR</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-protocol-notifications'>Light v2 Protocol Notifications</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changed">LIGHT_COLOR_CHANGED</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changing">LIGHT_COLOR_CHANGING</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-events'>Light V2 Proxy Events</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-events">light_color_changed</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-events">light_color_changing</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-extras'>Light V2 Proxy Extras</h3>
+<p>New supporting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-extras-interface-library">documentation</a>.</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-advanced-lighting-scene-agent'>Advanced Lighting Scene Agent </h3>
+<p>New supporting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#advanced-lighting-scene-agent">documentation</a>.</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-driver-development-best-practices'>Light Driver Development Best Practices</h3>
+<p>A new section has been added to the Light V2 proxy content including <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-driver-development-best-practices">best practice recommendations</a> for light driver developers.</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-audio-video-switch-display-adjustable-bindings'>Audio Video Switch Display Adjustable Bindings</h3>
+<p>O.S. releases 3.3.0 provides the ability to hide <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#display-adjustable-av-switch-bindings">AV Switch Bindings</a> that are not being used. This feature has been provided to better manage the UI display within ComposerPro.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-2-3'>What’s New in 3.2.3</h2>
+
+<p><strong>Audio Equalization available on Navigators</strong></p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#amplifier-navigator-eq">Amplifier</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#audio-video-switch-navigator-eq">AV Switch</a> Proxies have been enhanced to support the ability to display audio EQ functions on devices running Navigator. The enhancement includes a set of new Proxy Commands, Notifications and Capabilities to support this functionality.</p>
+
+<p><strong>Dynamic Transport Controls on Navigators</strong></p>
+
+<p>Audio Video drivers now have the ability to define which <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-transport-controls-in-navigator">transport controls</a> are displayed on Navigators. This includes which buttons appear on the Button Bar as well as the Media Dashboard. This enhancement allows for the appropriate transport controls being displayed for each AV device.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-2-2'>What’s New in 3.2.2</h2>
+
+<p><em>There were no changes to this content for Operating System 3.2.2.</em></p>
+
+<h2 id='what-s-new-what-s-new-in-3-2-1'>What’s New in 3.2.1</h2>
+
+<p><em>There were no changes to this content for Operating System 3.2.1.</em></p>
+
+<p><h2 id='what-s-new-what-s-new-in-3-2-0'>What’s New in 3.2.0</h2><h3 id='what-s-new-what-s-new-in-3-2-0-proxies-that-were-modified'>Proxies that were Modified** </h3>
+<p><strong>Security Proxy</strong>
+The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-partition-notifications-request_default_user_code_">REQUEST_DEFAULT_USER_CODE</a> partition notification was added as a mechanism for the protocol driver
+to initiate the communication to get that default user code upon driver update.</p></p>
+
+<p>The following Security Protocol Notifications were deprecated from the SDK: ALARM, ALARM_CLEAR, AWAY, DISARM, HOME, TROUBLE. Please see the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-panel-notifications">Security Panel Notification</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-partition-notifications">Security Partition Notification</a> areas for the latest list of Notifies.</p>
+
+<p><h2 id='what-s-new-what-was-new-in-3-1-2'>What was New in 3.1.2</h2><h3 id='what-s-new-what-was-new-in-3-1-2-proxies-that-were-deprecated'>Proxies that were Deprecated** </h3>
+<p>The following Proxies were deprecated from the Proxy and Protocol Guide:</p></p>
+
+<ul>
+<li>iPod</li>
+<li>Load Controller</li>
+</ul>
+
+<p><h2 id='what-s-new-what-was-new-in-3-1-0'>What was New in 3.1.0</h2><h3 id='what-s-new-what-was-new-in-3-1-0-proxies-that-were-modified'>Proxies that were Modified** </h3>
+<p><strong>Light V2 Proxy</strong>
+light sample.c4i - A sample driver has been included to assist with better understanding the basic flow of commands from the Light Proxy as well as receiving protocol notifications. The driver can be found in the Samples directory under the root level of the DriverWorks SDK.zip file</p></p>
+
+<p><strong>Media Service Proxy</strong>
+Detail Screen Type - Information regarding the implementation of the Detail Type Screen has been added to the documentation.</p>
+
+<p><h2 id='what-s-new-what-was-new-in-o-s-3'>What was New in O.S.3</h2><h3 id='what-s-new-what-was-new-in-o-s-3-proxies-that-were-modified'>Proxies that were Modified** </h3>
+<p><strong>KeyPad Proxy</strong></p></p>
+
+<p>New Button Linking functionality has been added to the Proxy. Button Linking supports the ability of a driver interacting with a second driver using Button State and Button LED State. </p>
+
+<p><strong>Light (V2) Proxy</strong>
+LightV2 Proxy has been significantly enhanced in this release. It is recommended that Light Driver writers thoroughly review the Proxy content in this release. The changes included not only impact drivers written against OS 3. Previously delivered Light Proxy elements have been modified or in some cases deprecated. </p>
+
+<p>In OS 3, the proxy has been conceptually split into two components. The first being a Wall Control/Keypad portion and the second is a redesigned Light portion.The Light portion has been developed as a Bulb Library. The ultimate goal of the Bulb Library is to support ,more versatility for drivers to interrogate, group, control and manage individual drivers and bulbs. Bulb color, target level, minimum and maximum levels, cold start timing and other features are implemented in the Bulb Library. Dynamic Capabilities have also been added to the Light Portion. Note that all changes maintain backwards compatibility for driver side interaction. However, Navigators will have functionality deprecated due to performance reasons or improved ways of communicating with the driver.</p>
+
+<p><strong>Media Service Proxy</strong>
+Favoriting: In conjunction with the ability to &quot;Favorite&quot; Navigator UI screens in OS 3, drivers written using the Media Service Proxy can now provide the ability for end users to designate favorite media delivered through an Media Service Proxy driver such as Playlists, Albums, Tracks, Stations, Movies, TV Shows, etc. </p>
+
+<p>DashboardChanged Event: The DashboardChanged event now includes content on the use of custom icons and actions.</p>
+
+<p>Driver Notification Context Example: New code examples on have been added to the Media Service Proxy Driver Notification Prototype section in the Appendix.</p>
+
+<p><strong> Best Practices</strong>
+A new section called Best Practices has been added to the Proxy and Protocol Guide. This section contains information regarding the use cases that fall outside of the typical Proxy/Protocol driver implementation. This release contains Best Practice content on the following:</p>
+
+<p>Using the new Proxy-less command UPDATE PROPERTY. This is a non proxy-specific function that can be called from any device to change a property of any other device.</p>
+
+<p>OS 3 Navigator UI and Volume Control - Managing Volume Commands in conjunction with the use of OS 3&#39;s new volume control slider on the Control4 UI.</p>
+<h1 id='intercom-proxy-terminology'>Intercom Proxy Terminology</h1>
+
+<p>The following terms are specific to the Control4 Intercom Proxy and their use in developing a door station or door station like driver. Note that this content does not include the scope of developing a touch panel to support intercom use.</p>
+
+<p><strong>Intercom Call Commands</strong> –  Includes a set of commands that are sent from the Intercom Proxy to the door station device that is supported by your driver. An example of an Intercom Proxy Command is <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-start-_call">START_CALL</a>. When your driver receives the START_CALL command, it must handle the command in a manner that enables your device to begin a call.</p>
+
+<p><strong>Intercom Call Notifications</strong> -  Includes a set  of notifications  that are sent from the device you are supporting, via your driver, to the Intercom Proxy. For example, when your driver receives a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-start-_call">START_CALL</a> command, it will send a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_accepted">CALL_ACCEPTED</a> notification to the Intercom Proxy.</p>
+
+<p><strong>Intercom Call Requests</strong> - These functions represent requests that are sent from your device driver to the Intercom Proxy to obtain various sets of call data. For example, when needed your driver may send the Intercom Call Request of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-requests-get_device_list">GET_DEVICE_LIST</a>. The GET_DEVICE_LIST request is a function for gathering information about other devices on the network that  might communicate with your device. Information returned includes data such as whether another device has a camera, does it include a display, etc.</p>
+
+<p><strong>Intercom State Commands</strong> - These functions consist of commands that impact the state of the device you are writing a driver for. For example, your driver may receive a State Command of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-commands-set_ringer_volume">SET_RINGER_VOLUME</a> from the Intercom Proxy. SET_RINGER_VOLUME will be sent with a numerical value indicating the new ringer volume level. Your driver will need to receive this state command and adjust the ringer volume on your device accordingly.</p>
+
+<p><strong>Intercom State Notifications</strong> - These functions consist of notifications    that are sent from the device you are supporting, via your driver, to the Intercom Proxy. For example, when your driver receives the State Command of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-commands-set_ringer_volume">SET_RINGER_VOLUME</a>, it needs to send a State Notification of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-ringer_volume_changed">RINGER_VOLUME_CHANGED</a> that includes the new ringer volume value.</p>
+
+<p><strong>Intercom State Requests</strong> - These functions  represent requests that are sent from your device driver to the Intercom Proxy for various sets of device state data. For example, when needed your driver may send the Intercom Call Request of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-requests-get_state_list">GET_STATE_LIST</a>. This request returns the device states for all of the intercom endpoints in the project.</p>
+
+<p><strong>Intercom Call Group Requests</strong> - Currently, this consists of one function: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-group-requests-get_group_list">GET_GROUP_LIST</a> which can be used by your driver to obtain the group list of all of intercom call groups in the project.</p>
+
+<p><strong>Intercom Capabilities</strong> -  These <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-capabilities">functions </a> consist of Boolean XML elements that need to be defined in your driver. They represent functionality supported by your device such as do not disturb support, camera inclusion or its ability to play a door chime.</p>
+
+<p><strong>Intercom Events</strong> - <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-events">Events</a> are useful to define in your driver as they provide an opportunity for ComposerPro programming to occur based on them being fired. For example, if the speaker_volume_changed Event is defined in your driver and that Event fires when the speaker volume of your device changes, it would be possible (through programming in ComposerPro) to modify the speaker volume of other intercom devices in the project.</p>
+
+<p><strong>Intercom Conditionals</strong> - <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-conditionals">Conditionals</a> are useful to define in your driver as they also provide an opportunity for ComposerPro programming to occur based on their state. For example, if the In a Call conditional is set to true, the device that reported this conditional could be displayed as busy on Navigators. </p>
+
+<p><strong>Intercom Variables</strong> – The Intercom Proxy supports three Variables which can also be used in ComposerPro programming when defined in your driver. For example, the CALL_DURATION Variable can be assigned a time limit for a call, If that limit is exceeded, the call can be terminated.</p>
+<h1 id='intercom-proxy-best-practices'>Intercom Proxy Best Practices</h1>
+
+<h2 id='intercom-proxy-best-practices-overview'>Overview</h2>
+
+<p>The Intercom Proxy interface is defined in terms of Commands, Requests and Notifications, each of which are described in this section of the proxy and Protocol Guide.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands">Intercom Proxy Commands</a> are issued by a proxy consumer and may or may not result in an asynchronous notification in response.  Commands typically change state of the Intercom Proxy, or other components of the intercom architecture.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-requests">Intercom Proxy Requests</a> are issued from a proxy consumer with the expectation of getting a response from the protocol.  Requests do not change state of the intercom proxy or any other component of the architecture.  </p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications">Intercom Proxy Notifications</a> are sent from the intercom proxy to the intercom consumer asynchronously, and indicate a state change in the intercom proxy or one of its related architecture components.</p>
+
+<p>All communication through the proxy interface is asynchronous.  Even request responses, such as getting a list of known intercom devices, are returned asynchronously with respect to the request for that data.</p>
+
+<h2 id='intercom-proxy-best-practices-storing-session-ids'>Storing Session IDs</h2>
+
+<p>Many intercom API commands and requests require the sessionId as an input parameter. The value for this parameter is provided by the SIP Client on the device in response to issuing a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-start-_call"><code>START_CALL</code></a> command or a physical button press event. </p>
+
+<p>This sessionId value is included in the resulting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-outgoing_call"><code>OUTGOING_CALL</code></a> or <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call"><code>INCOMING_CALL</code></a> notifications. The intercom proxy consumer is responsible for storing the sessionId returned with these notifications for use in subsequent commands and requests.</p>
+
+<h2 id='intercom-proxy-best-practices-using-the-remoteaor-property'>Using the RemoteAor Property</h2>
+
+<p>When the “remoteAor” parameter is used in a notification or command, the value is always the address of record of the other intercom device participating in an intercom call. </p>
+
+<p>For example, consider that intercom device A has address of record of “sip-user-A@192.168.1.123” and intercom device B has an address of record of “sip-user-B@192.168.1.123”. </p>
+
+<p>Intercom device A initiates a call with intercom device B, which results in an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call"><code>INCOMING_CALL</code></a> notification on intercom device B. When intercom device B issues the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-accept_call"><code>ACCEPT_CALL</code></a> command, which takes remoteAor as a parameter, intercom device B should use “sip-user-A@192.168.1.123” (the address of record of intercom device A, or the initiator) as the value of this parameter. </p>
+
+<p>Likewise, when intercom device A sends the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_accepted"><code>CALL_ACCEPTED</code></a> notification, it will contain a remoteAor property that has the value of the address of record of intercom device B, or “sip-user-B@192.168.1.123”.</p>
+<h1 id='intercom-proxy-settings'>Intercom Proxy Settings</h1>
+
+<h2 id='intercom-proxy-settings-exclude-from-navigator'>Exclude from Navigator</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint is displayed on the Navigator Landing Page. It can be used to hide endpoints from the user interface so that they can only be accessed from programming.</p>
+
+<h2 id='intercom-proxy-settings-do-not-disturb'>Do Not Disturb</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint can receive incoming calls; it has no effect on the endpoint’s ability to make an outgoing call. </p>
+
+<h2 id='intercom-proxy-settings-auto-answer'>Auto Answer</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint automatically answers incoming calls. Note that Auto Answer is ignored in the case of group calls.</p>
+
+<h2 id='intercom-proxy-settings-send-video'>Send Video</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint automatically sends video when it starts or receives a call; if the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-capabilities-has_camera"><code>has_camera</code></a> capability is false, this setting has no effect.</p>
+
+<h2 id='intercom-proxy-settings-monitor-mode'>Monitor Mode</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint is in monitor mode; a monitor mode call works like a baby monitor; it will quietly auto answer the incoming call on the receiver&#39;s (monitored) endpoint, the initiator&#39;s (monitoring) endpoint is automatically muted so that there is no transmission of sound to the monitored endpoint. The initiator can un-mute the call anytime two way communications are needed. Endpoints with monitor enabled will not receive broadcast calls, even if they are specified in the call group used for the broadcast.</p>
+
+<p>Monitor mode also has a feature that allows the call to be taken over by different endpoint without having to end the original call. This feature is allows the user to continue to monitor a particular endpoint as they move from one room to another. </p>
+
+<h2 id='intercom-proxy-settings-ringer-volume'>Ringer Volume</h2>
+
+<p>This setting is used to control the ringer volume level of an intercom endpoint. </p>
+
+<h2 id='intercom-proxy-settings-speaker-volume'>Speaker Volume</h2>
+
+<p>This setting is used to control the speaker volume level of an intercom endpoint. </p>
+
+<h2 id='intercom-proxy-settings-microphone-gain'>Microphone Gain</h2>
+
+<p>This setting is used by some Control4 devices to control the microphone gain level of an intercom endpoint. Control4 intercom endpoints do not support microphone gain adjustments; this setting is provided for 3rd party use. </p>
+
+<h2 id='intercom-proxy-settings-camera-enabled'>Camera Enabled</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint’s camera will be used when the endpoint is in a call; if the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-capabilities-has_camera"><code>has_camera</code></a> capability is false, this setting has no effect.</p>
+
+<h2 id='intercom-proxy-settings-aec-enabled'>AEC Enabled</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint will use conservative auto echo cancelation (AEC) when the endpoint is in a call.</p>
+
+<p>If the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-capabilities-can_set_aec"><code>can_set_aec</code></a> capability is false, this setting has no effect.</p>
+
+<h2 id='intercom-proxy-settings-play-door-chime'>Play Door Chime</h2>
+
+<p>This setting is used to control whether or not an intercom endpoint will use the door chime sound effect when a call is received from a door station. If this setting is disabled the endpoint will ring normally when a door station call is received.</p>
+<h1 id='intercom-call-commands'>Intercom Call Commands</h1>
+
+<h2 id='intercom-call-commands-accept_call'>ACCEPT_CALL</h2>
+
+<p>The ACCEPT_CALL command is sent from the Intercom Proxy to the device driver. When the driver receives the ACCEPT_CALL command, it must handle the command in a manner that enables the device to accept the incoming call. When implemented successfully, receipt of the ACCEPT_CALL command is followed the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_accepted">CALL_ACCEPTED</a> notification being sent from the device driver to the Proxy.</p>
+
+<h3 id='intercom-call-commands-accept_call-signature'>Signature</h3>
+
+<p><code>ACCEPT_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state.</li>
+<li>The device goes into a state of “incoming call”. </li>
+<li>This needs to trigger an Incoming_Call notification which is sent from the device, via the device driver, to the Proxy.</li>
+<li>Upon call acceptance, this is followed by the device driver sending a CALL_ACCEPTED notification to the Proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td><code>DEVICE_ID</code> - The proxy ID of the caller</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>REMOTE_DEVICE</code> - The proxy ID of the callee</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>SESSION_ID</code> -  The session ID of the call. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>AUDIO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY), 3 = Inactive (NO_SEND_RECV)</td>
+</tr>
+<tr>
+<td>num</td>
+<td>VIDEO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY). The Audio channel cannot be Inactive.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-accept_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-commands-accept_call-usage-notes'>Usage Notes:</h3>
+
+<p>This call command can be initiated by pressing a button on a UI displayed on devices running Navigator, Control-Control in ComposerPro and Composer Programming.</p>
+
+<h2 id='intercom-call-commands-end_call'>END_CALL</h2>
+
+<p>This command only applies to an established call session. If a call has not been established – it cannot be ended. The END_CALL command is sent from the Intercom Proxy to the device driver when an established call is to be terminated. After the call is terminated, the device driver must send the CALL_ENDED notification to both the initiator and the receiver of the call.  </p>
+
+<h3 id='intercom-call-commands-end_call-signature'>Signature</h3>
+
+<p><code>END_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state.</li>
+<li>The device goes into a state of “incoming call”. </li>
+<li>This needs to trigger an Incoming_Call notification which is sent from the device, via the device driver, to the Proxy.</li>
+<li>Upon call acceptance, this is followed by the device driver sending a CALL_ACCEPTED notification to the Proxy.</li>
+<li>When the call is to be terminated, The END_CALL command is sent from the intercom proxy to the device driver.</li>
+<li>When the device driver terminates the call (SIP BYE), the CALL_ENDED notification is sent from the driver to the Intercom proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td><code>DEVICE_ID</code> - The proxy ID of the caller.</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>REMOTE_DEVICE</code> - The proxy ID of the callee.</td>
+</tr>
+<tr>
+<td>str</td>
+<td><code>SESSION_ID</code> - The session ID of the call. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-end_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='intercom-call-commands-mute_call'>MUTE_CALL</h2>
+
+<p>This command only applies to an established call session. If a call has not been established – it cannot be muted. Likewise, a call cannot be muted when it is in a ringing state or a SIP BYE or ENDING states. The MUTE_CALL command is sent from the Intercom Proxy to the device driver. When the driver receives the MUTE_CALL command, it must handle the command in a manner that enables the device to place the existing call in a muted or un-muted state. Placing the device in a true muted state or setting the device volume to zero is supported for muting purposes. There is no associated notification for the MUTE_CALL command. The device driver must maintain the state of the call in order to un-mute or mute the call correctly</p>
+
+<h3 id='intercom-call-commands-mute_call-signature'>Signature</h3>
+
+<p><code>MUTE_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state.</li>
+<li>The device goes into a state of “incoming call”. </li>
+<li>This needs to trigger an Incoming_Call notification which is sent from the device, via the device driver, to the Proxy.</li>
+<li>Upon call acceptance, this is followed by the device driver sending a CALL_ACCEPTED notification to the Proxy.</li>
+<li>When the call is to be muted or un-muted, the MUTE_CALL command is sent from the intercom proxy to the device driver.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>muteAudio - A Boolean flag indicating whether to mute or un-mute the indicated session. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-mute_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-commands-mute_call-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">MUTE_CALL</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">muteAudio</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">muteAudio</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">MUTE_CALL</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-call-commands-pause_call'>PAUSE_CALL</h2>
+<p><strong>NOTE:</strong> The PAUSE_CALL command is currently deprecated and not available for use._ 
+This command can be issued by either the initiator or receiver and causes the call associated with the indicated session to be placed on hold (or paused).  This command will result in a <code>CALL_PAUSED</code> notification being sent to both the initiator and the receiver of the call.</p>
+<h3 id='intercom-call-commands-pause_call-signature'>Signature</h3>
+
+<p><code>PAUSE_CALL ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td><code>DEVICE_ID</code> - The proxy ID of the caller</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>REMOTE_DEVICE</code> - The proxy ID of the callee</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>SESSION_ID</code> - The session ID of the call. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-pause_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='intercom-call-commands-play_door_-chime'>PLAY_DOOR_ CHIME</h2>
+
+<p><strong>NOTE:</strong> The PLAY_DOOR_CHIME command is currently deprecated and not available for use._ </p>
+
+<p>This command can be issued by any device to play the currently defined door chime sound effect on that device.</p>
+
+<h3 id='intercom-call-commands-play_door_-chime-signature'>Signature</h3>
+
+<p><code>PLAY_DOOR_CAHIME ()</code></p>
+
+<h3 id='intercom-call-commands-play_door_-chime-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-commands-play_door_-chime-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='intercom-call-commands-reject_call'>REJECT_CALL</h2>
+
+<p>The REJECT_CALL command is sent from the Intercom Proxy to the device driver. When the driver receives the Reject Call command, it must handle the command in a manner that enables the device to reject the incoming call. When implemented successfully, receipt of the REJECT_CALL command should be followed by sending a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_rejected">CALL_REJECTED</a> notification from the device driver to the Proxy.</p>
+
+<h3 id='intercom-call-commands-reject_call-signature'>Signature</h3>
+
+<p><code>REJECT_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state. </li>
+<li>The device goes into a state of “incoming call”. </li>
+<li>This needs to trigger an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call">Incoming_Call</a> notification which is sent from the device, via the device driver, to the Proxy.</li>
+<li>Upon call acceptance, this is followed by the device driver sending a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_rejected">CALL_REJECTED</a> notification to the Proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td><code>DEVICE_ID</code> - The proxy ID of the caller.</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>REMOTE_DEVICE</code> - The proxy ID of the callee.</td>
+</tr>
+<tr>
+<td>str</td>
+<td><code>SESSION_ID</code> - The session ID of the call. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-reject_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-commands-reject_call-usage-notes'>Usage Notes:</h3>
+
+<p>This command can be initiated by pressing a button on a UI displayed on devices running Navigator, Control-Control in ComposerPro and Composer Programming. </p>
+
+<p>The Reject Call command has no effect when sent during an active call session. End Call should be used in this instance.</p>
+
+<p>If auto-answer is enabled, it overrides the option to reject the call and the Proxy will automatically accept it.</p>
+
+<h2 id='intercom-call-commands-resume_call'>RESUME_CALL</h2>
+
+<p><strong>NOTE:</strong> The RESUME_CALL command is currently deprecated and not available for use._ 
+This command can be issued by an intercom device that has already paused the call associated with the indicated session id. This command will result in a <code>CALL_RESUMED</code> notification being sent to both the initiator and the receiver of the call.</p>
+
+<h3 id='intercom-call-commands-resume_call-signature'>Signature</h3>
+
+<p><code>RESUME_CALL ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td><code>DEVICE_ID</code> - The proxy ID of the caller</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>REMOTE_DEVICE</code> - The proxy ID of the callee</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>SESSION_ID</code> - The session ID of the call. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-resume_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='intercom-call-commands-start-_call'>START _CALL</h2>
+
+<p>The START_CALL command is initiated through Programming or Control/Control in ComposerPro. It is sent to the Intercom Proxy, which then sends a START_CALL to the device driver. When the driver receives the START_CALL command, it must handle the command in a manner that enables the device to begin a call. When implemented successfully, receipt of the START_CALL command is followed by the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_accepted">CALL_ACCEPTED</a> notification being sent from the device driver to the Proxy.</p>
+
+<h3 id='intercom-call-commands-start-_call-signature'>Signature</h3>
+
+<p><code>START_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>Upon receiving a START_CALL command from the Proxy, a SIP invite is generated.</li>
+<li>The SIP invite to a call is received by the device via the device driver and the device enters a ringing state.</li>
+<li>The device goes into a state of “outgoing call”. </li>
+<li>This needs to trigger an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-outgoing_call">Outgoing_Call</a> notification which is sent from the device, via the device driver, to the Proxy.</li>
+<li>Upon call acceptance, this is followed by the device driver that receives the call, sending a CALL_ACCEPTED notification to the Proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td><code>DEVICE_ID</code> - The proxy ID of the caller</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>REMOTE_DEVICE_ID</code> - The proxy ID of the callee</td>
+</tr>
+<tr>
+<td>num</td>
+<td>AUDIO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY), 3 = Inactive (NO_SEND_RECV)</td>
+</tr>
+<tr>
+<td>num</td>
+<td>VIDEO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY). The Audio channel cannot be Inactive.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>RING - The ring parameter for the call 0 = plays default Navigator beep, 1 = plays doorbell chime</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-start-_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='intercom-call-commands-start_monitor_call'>START_MONITOR_CALL</h2>
+
+<p>The START_MONITOR_CALL command is sent from the Intercom Proxy to the device driver. When the driver receives the START_MONITOR_CALL command, it must be in monitor mode to successfully handle it. A device can be set to monitor mode via Composer Pro or Navigator. When implemented successfully, the command will result in an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call">INCOMING_CALL</a> notification being sent to the proxy. Note that in addition to a device being in monitor mode, it should also mute itself or turn volume level to zero when receiving the START_MONITOR_CALL. This ensures that no sounds come from the receiving device. This is useful in the case where a device is being used as a baby monitor.</p>
+
+<h3 id='intercom-call-commands-start_monitor_call-signature'>Signature</h3>
+
+<p><code>START_MONITOR_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>START_MONITOR_CALL command is sent from the intercom proxy to the device driver.</li>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state.</li>
+<li>The device goes into a state of “incoming call”. </li>
+<li>This needs to trigger an Incoming_Call notification which is sent from the device, via the device driver, to the Proxy.</li>
+<li>Because the device receiving the call is in monitor mode, the call is automatically accepted.</li>
+<li>Upon call acceptance, this is followed by the device driver sending a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_accepted">CALL_ACCEPTED</a> notification to the Proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td><code>DEVICE_ID</code> - The proxy ID of the caller</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>REMOTE_DEVICE_ID</code> - The proxy ID of the callee</td>
+</tr>
+<tr>
+<td>num</td>
+<td>AUDIO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY), 3 = Inactive (NO_SEND_RECV)</td>
+</tr>
+<tr>
+<td>num</td>
+<td>VIDEO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY). The Audio channel cannot be Inactive.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>RING - The ring parameter for the call 0 = default Navigator beep,  1 = doorbell chime. Note that the RING param must be passed for the function to work correctly. The driver must place the receiving on mute or turn volume level to zero</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-commands-start_monitor_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+<h1 id='intercom-call-requests'>Intercom Call Requests</h1>
+
+<h2 id='intercom-call-requests-get_device'>GET_DEVICE</h2>
+
+<p>This request is issued to obtain the device properties of a specified intercom endpoint.</p>
+
+<h3 id='intercom-call-requests-get_device-signature'>Signature</h3>
+
+<p><code>GET_DEVICE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Proxy Device ID of the intercom endpoint whose custom button information is to be returned.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-requests-get_device-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">GET_DEVICE</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">idDevice</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">idDevice</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">GET_DEVICE</span><span class="o">&gt;</span>
+</code></pre></div><h3 id='intercom-call-requests-get_device-response-parameters'>Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>proxyid</td>
+<td>The proxy device id of the intercom endpoint for which the data was requested.  It is a number that is greater than or equal to zero (0)</td>
+</tr>
+<tr>
+<td>protocolid</td>
+<td>The protocol device id of the intercom endpoint for which the data was requested. It is a number that is greater than or equal to zero (0).</td>
+</tr>
+<tr>
+<td>hasCamera</td>
+<td>A Boolean flag indicating whether or not the indicated intercom device has a camera. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>hasDisplay</td>
+<td>A Boolean flag indicating whether or not the specified intercom endpoint has a display. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>isDoorStation</td>
+<td>A Boolean flag indicating whether or not the indicated intercom device is a door station. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>displayName</td>
+<td>The display name to be used when referring to the specified intercom endpoint in the system’s user interface (UI).</td>
+</tr>
+<tr>
+<td>sipUserName</td>
+<td>The SIP user name for the specified intercom endpoint.</td>
+</tr>
+<tr>
+<td>sipAOR</td>
+<td>The SIP address of record for the specified intercom endpoint. This takes the form of “<a href="#">sip user name</a>@<a href="#">sip server IP address</a>”.</td>
+</tr>
+</tbody></table>
+
+<p>Response Prototype</p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_props</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="err">”</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">proxyId</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">proxyId</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">protocolId</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">protocolId</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">hasCamera</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">hasCamera</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">hasDisplay</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">hasDisplay</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">hasButtons</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">hasButtons</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">isDoorStation</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">isDoorStation</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">displayName</span><span class="o">&gt;</span><span class="p">[</span><span class="n">string</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">displayName</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">sipUserName</span><span class="o">&gt;</span><span class="p">[</span><span class="n">string</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">sipUserName</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">sipAOR</span><span class="o">&gt;</span><span class="p">[</span><span class="n">string</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">sipAOR</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_props</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h2 id='intercom-call-requests-get_device_list'>GET_DEVICE_LIST</h2>
+
+<p>This request is issued to obtain the device properties of all of the intercom endpoints in the project.</p>
+
+<h3 id='intercom-call-requests-get_device_list-signature'>Signature</h3>
+
+<p><code>GET_DEVICE_LIST ()</code></p>
+
+<h3 id='intercom-call-requests-get_device_list-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-requests-get_device_list-response-parameters'>Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>device_list</code></td>
+<td>A container for the collection of device property records.</td>
+</tr>
+<tr>
+<td><code>device_props</code></td>
+<td>A <code>device_props</code> record for each intercom endpoint in the project.  See the response format for the <code>GET_DEVICE</code>.</td>
+</tr>
+</tbody></table>
+
+<p>Response Prototype</p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_list</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">device_props</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">Id1</span><span class="err">”</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="n">see</span> <span class="n">the</span> <span class="n">GET_DEVICE</span> <span class="n">response</span> <span class="n">format</span><span class="p">]</span>
+   <span class="o">&lt;/</span><span class="n">device_props</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">device_props</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">Id2</span><span class="err">”</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="n">see</span> <span class="n">the</span> <span class="n">GET_DEVICE</span> <span class="n">response</span> <span class="n">format</span><span class="p">]</span>
+   <span class="o">&lt;/</span><span class="n">device_props</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">device_props</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">IdN</span><span class="err">”</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="n">see</span> <span class="n">the</span> <span class="n">GET_DEVICE</span> <span class="n">response</span> <span class="n">format</span><span class="p">]</span>
+   <span class="o">&lt;/</span><span class="n">device_props</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_list</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h2 id='intercom-call-requests-get_session'>GET_SESSION</h2>
+
+<p>This request is issued to obtain the active session information for the requesting device.</p>
+
+<h3 id='intercom-call-requests-get_session-signature'>Signature</h3>
+
+<p><code>GET_SESSION ()</code></p>
+
+<h3 id='intercom-call-requests-get_session-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-requests-get_session-response-parameters'>Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The proxy device id of the intercom endpoint to which this request’s response is sent.  This value is used to insure that the response is processed by proper device driver (i.e. the &quot;requestor&quot;). It is a number that is greater than or equal to zero (0).</td>
+</tr>
+<tr>
+<td>sessionId</td>
+<td>Numeric value indicating the session id for the active session.</td>
+</tr>
+<tr>
+<td>videoMode</td>
+<td>Numeric value indicating video mode being used for this session by the specified endpoint. (0=transmit/receive, 1=transmit only, 2=receive only, 3=no video)</td>
+</tr>
+<tr>
+<td>audioMode</td>
+<td>Numeric value indicating audio mode being used for this session by the specified endpoint. (0=transmit/receive, 1=transmit only, 2=receive only, 3=no audio)</td>
+</tr>
+<tr>
+<td>callerName</td>
+<td>The device name of the intercom endpoint which initiated the call.</td>
+</tr>
+<tr>
+<td>callerDevId</td>
+<td>The proxy device id of the intercom endpoint which initiated the call.</td>
+</tr>
+<tr>
+<td>calleeDevId</td>
+<td>The proxy device id of the intercom endpoint which received the call.</td>
+</tr>
+<tr>
+<td>calleName</td>
+<td>The device name of the intercom endpoint which received the call.</td>
+</tr>
+</tbody></table>
+
+<p>Response Prototype</p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_session</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="err">”</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">sessionId</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">sessionId</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">videoMode</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">videoMode</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">audioMode</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">audioMode</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">callerDevId</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">callerDevId</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">callerName</span><span class="o">&gt;</span><span class="p">[</span><span class="n">string</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">callerName</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">calleeDevId</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">calleeDevId</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">calleeName</span><span class="o">&gt;</span><span class="p">[</span><span class="n">string</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">calleeName</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_session</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h2 id='intercom-call-requests-get_session_list'>GET_SESSION_LIST</h2>
+
+<p>This request is issued to obtain the session information of all of sessions on this endpoint.</p>
+
+<h3 id='intercom-call-requests-get_session_list-signature'>Signature</h3>
+
+<p><code>GET_SESSION_LIST ()</code></p>
+
+<h3 id='intercom-call-requests-get_session_list-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-requests-get_session_list-response-parameters'>Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>session_list</code></td>
+<td>A container for the collection of session information records.</td>
+</tr>
+<tr>
+<td><code>device_session</code></td>
+<td>A <code>device_props</code> record for each intercom endpoint in the project.  See the response format for the <code>GET_SESSION</code>.</td>
+</tr>
+</tbody></table>
+
+<p>Response Prototype</p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">session_list</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">device_session</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">Id1</span><span class="err">”</span><span class="o">&gt;</span>
+   <span class="p">[</span><span class="n">see</span> <span class="n">the</span> <span class="n">GET_SESSION</span> <span class="n">response</span> <span class="n">format</span><span class="p">]</span>
+  <span class="o">&lt;/</span><span class="n">device_session</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">device_session</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">Id2</span><span class="err">”</span><span class="o">&gt;</span>
+   <span class="p">[</span><span class="n">see</span> <span class="n">the</span> <span class="n">GET_SESSION</span> <span class="n">response</span> <span class="n">format</span><span class="p">]</span>
+  <span class="o">&lt;/</span><span class="n">device_session</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">device_session</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">IdN</span><span class="err">”</span><span class="o">&gt;</span>
+   <span class="p">[</span><span class="n">see</span> <span class="n">the</span> <span class="n">GET_SESSION</span> <span class="n">response</span> <span class="n">format</span><span class="p">]</span>
+  <span class="o">&lt;/</span><span class="n">device_session</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">session_list</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h2 id='intercom-call-requests-get_timeout'>GET_TIMEOUT</h2>
+
+<p>This request is issued to obtain the current timeout setting for manually answering a call.  If the timeout duration expires before a call is answered, the call is automatically ended.  This value is configured in the Video Intercom Agent in Composer.</p>
+
+<h3 id='intercom-call-requests-get_timeout-signature'>Signature</h3>
+
+<p><code>GET_TIMEOUT ()</code></p>
+
+<h3 id='intercom-call-requests-get_timeout-parameter'>Parameter</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-requests-get_timeout-response-parameters'>Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The duration (in seconds) for how long a new call should wait without being answered before the call is ended (number from 10 to 120).</td>
+</tr>
+</tbody></table>
+
+<p>Response Prototype</p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">timeout</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">timeout</span><span class="o">&gt;</span>
+</code></pre></div>
+<h1 id='intercom-call-notifications'>Intercom Call Notifications</h1>
+
+<h2 id='intercom-call-notifications-call_accepted'>CALL_ACCEPTED</h2>
+
+<p>The CALL_ACCEPTED notification is generated by the device driver and sent to the intercom proxy when a call is accepted.</p>
+
+<h3 id='intercom-call-notifications-call_accepted-signature'>Signature</h3>
+
+<p><code>CALL_ACCEPTED ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state. </li>
+<li>The device goes into a state of “incoming call”. </li>
+<li>Upon entering this state, the device driver needs to trigger an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call">INCOMING_CALL </a>notification which is sent from the device to the intercom proxy.</li>
+<li>Upon answering the call, the CALL_ACCEPTED notification is sent to the intercom proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Device ID of the Proxy.</td>
+</tr>
+<tr>
+<td>str</td>
+<td>The Session ID of the SIP session.  Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>AUDIO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY), 3 = Inactive (NO_SEND_RECV)</td>
+</tr>
+<tr>
+<td>num</td>
+<td>VIDEO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY). The Audio channel cannot be Inactive.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-notifications-call_accepted-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='intercom-call-notifications-call_ended'>CALL_ENDED</h2>
+
+<p>The CALL_ENDED notification is generated by the device driver and sent to the intercom proxy when a call session is ended. After a SIP call is ended, any device participating in the call should send CALL_ENDED notification.</p>
+
+<h3 id='intercom-call-notifications-call_ended-signature'>Signature</h3>
+
+<p><code>CALL_ENDED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Device ID of the Proxy.</td>
+</tr>
+<tr>
+<td>str</td>
+<td>The Session ID of the SIP session. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>Hang up type: 0 = LOCAL, 1 = REMOTE, 2 = BCASTEMPTY, 3 = NOTFOUND, 4 = DEVBUSY, 5 = NOANSWER, 6 = HUNKOWN</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-notifications-call_ended-usage-notes'>Usage Notes:</h3>
+
+<p>The CALL_ENDED notification is only applicable to devices that are active in an answered, call session. For example, in the case of a group call, the CALL_ENDED notify is sent only by the device that was participating in the call. Other devices in the call list should sent a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_rejected">CALL_REJECTED</a> to the proxy. </p>
+
+<h2 id='intercom-call-notifications-camera_enabled_change'>CAMERA_ENABLED_CHANGE</h2>
+
+<p>Notification sent to the proxy  when the camera enabled value of the intercom has changed</p>
+
+<h3 id='intercom-call-notifications-camera_enabled_change-signature'>Signature</h3>
+
+<p><code>CALL_ENABLED_CHANGE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>str</td>
+<td>The new enabled value (true/false) of the intercom</td>
+</tr>
+</tbody></table>
+
+<h2 id='intercom-call-notifications-call_paused'>CALL_PAUSED</h2>
+
+<p><strong>NOTE:</strong> The CALL_PAUSED notify is currently deprecated and not available for use.\</p>
+
+<p>This notification is issued when a session is paused, it is sent to the initiator and all receiver(s) involved in the specified session.</p>
+
+<h3 id='intercom-call-notifications-call_paused-signature'>Signature</h3>
+
+<p><code>CALL_PAUSED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Device ID of the Proxy.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>The Session ID of the SIP session. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+</tbody></table>
+
+<h2 id='intercom-call-notifications-call_rejected'>CALL_REJECTED</h2>
+
+<p>The CALL_REJECTED notification is generated by the device driver and sent to the intercom proxy when a call is rejected.</p>
+
+<h3 id='intercom-call-notifications-call_rejected-signature'>Signature</h3>
+
+<p><code>CALL_REJECTED ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state. </li>
+<li>The device goes into a state of “incoming call”. </li>
+<li>Upon entering this state, the device driver needs to trigger an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call">INCOMING_CALL</a> notification which is sent from the device to the intercom proxy.</li>
+<li>Upon answering the call, the CALL_REJECTED notification is sent to the intercom proxy indicating that the device did not answer the call.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Device ID of the Proxy.</td>
+</tr>
+<tr>
+<td>str</td>
+<td>The Session ID of the SIP session. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>Hang up type: 0 = LOCAL, 1 = REMOTE, 2 = BCASTEMPTY, 3 = NOTFOUND, 4 = DEVBUSY, 5 = NOANSWER, 6 = HUNKOWN</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-notifications-call_rejected-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-call-notifications-call_rejected-usage-notes'>Usage Notes:</h3>
+
+<p>The CALL_REJECTED notification is only applicable to devices that are NOT active in a call session. For example, in the case of a group call, the CALL_REJECTED notify is sent only by the device or devices that did not participate in the call. Other devices in the call list that answered the call,  should sent a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_ended">CALL_ENDED</a> to the proxy. </p>
+
+<h2 id='intercom-call-notifications-call_resumed'>CALL_RESUMED</h2>
+
+<p><strong>NOTE:</strong> The CALL_RESUMED notify is currently deprecated and not available for use._</p>
+
+<p>This notification is issued when a session is resumed, it is sent to the initiator and all receiver(s) involved in the specified session.</p>
+
+<h3 id='intercom-call-notifications-call_resumed-signature'>Signature</h3>
+
+<p><code>CALL_ RESUMED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Device ID of the Proxy.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>The Session ID of the SIP session.  Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+</tbody></table>
+
+<h2 id='intercom-call-notifications-incoming_call'>INCOMING_CALL</h2>
+
+<p>The INCOMING_CALL notification is generated by the device driver upon receiving the invitation to a call from SIP. This notification is sent to the Intercom Proxy.</p>
+
+<h3 id='intercom-call-notifications-incoming_call-signature'>Signature</h3>
+
+<p><code>INCOMING_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is received by the device via the device driver and the device enters a ringing state. </li>
+<li>The device goes into a state of “Incoming call”. </li>
+<li>Upon entering this state, the device driver needs to trigger an Incoming_Call notification which is sent from the device, via the device driver, to the Proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Device ID of the Proxy.</td>
+</tr>
+<tr>
+<td>str</td>
+<td>The Session ID of the SIP session. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>Call type. 0 = REGULAR , 2 = MONITOR , 3 = FORKING, 5 = EXTERNAL</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>Remote_DEVICE_ID</code>. The Proxy ID of the remote endpoint of the call</td>
+</tr>
+<tr>
+<td>num</td>
+<td>AUDIO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY), 3 = Inactive (NO_SEND_RECV)</td>
+</tr>
+<tr>
+<td>num</td>
+<td>VIDEO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY). The Audio channel cannot be Inactive.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-notifications-incoming_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='intercom-call-notifications-outgoing_call'>OUTGOING_CALL</h2>
+
+<p>The OUTGOING_CALL notification is generated by the device driver and sent to the intercom proxy when a call invite is SENT. This notification is sent to the Intercom Proxy. </p>
+
+<h3 id='intercom-call-notifications-outgoing_call-signature'>Signature</h3>
+
+<p><code>OUTGOING_CALL ()</code></p>
+
+<p>Call Flow:</p>
+
+<ol>
+<li>A SIP invite to a call is sent by the device.</li>
+<li>The device goes into a state of “outgoing call”.</li>
+<li>Upon entering this state, the device driver needs to trigger an Outgoing_Call notification which is sent from the device driver to the Proxy.</li>
+</ol>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The Device ID of the Proxy.</td>
+</tr>
+<tr>
+<td>str</td>
+<td>The Session ID of the SIP session. Session ID is established when a call is initiated and serves as a unique identifier of the call.</td>
+</tr>
+<tr>
+<td>num</td>
+<td>Call type. 0 = REGULAR, 2 = MONITOR, 3 = FORKING, 5 = EXTERNAL</td>
+</tr>
+<tr>
+<td>num</td>
+<td><code>remote_device_id</code> = the proxy ID of the remote endpoint</td>
+</tr>
+<tr>
+<td>num</td>
+<td>AUDIO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY), 3 = Inactive (NO_SEND_RECV)</td>
+</tr>
+<tr>
+<td>num</td>
+<td>VIDEO - The requested video capacity for the call. 0 = Full Duplex (SEND_RECV), 1 = Transmit Only (SEND_ONLY), 2 = Receive Only RECV_ONLY). The Audio channel cannot be Inactive.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-call-notifications-outgoing_call-returns'>Returns</h3>
+
+<p><code>None</code></p>
+<h1 id='intercom-state-commands'>Intercom State Commands</h1>
+
+<h2 id='intercom-state-commands-set_camera_enable'>SET_CAMERA_ENABLE</h2>
+
+<p>This command is issued to enable or disable the camera on an intercom device.</p>
+
+<h3 id='intercom-state-commands-set_camera_enable-signature'>Signature</h3>
+
+<p><code>SET_CAMERA_ENABLE  ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>Boolean flag indicating whether enable or disable the camera on an intercom device. Enabled = 1, true, yes or on.  Disabled = 0, false, no or off.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set_camera_enable-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-commands-set_camera_enable-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_CAMERA_ENABLE</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cameraEnable</span><span class="o">&gt;</span><span class="p">[</span><span class="kc">true</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">cameraEnable</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_CAMERA_ENABLE</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-commands-set-dnd'>SET DND</h2>
+<p>This command is issued to toggle the “Do Not Disturb” setting of the intercom. </p>
+<h3 id='intercom-state-commands-set-dnd-signature'>Signature</h3>
+
+<p><code>SET_DND ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>Boolean flag indicating the new state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set-dnd-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-commands-set-dnd-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_DND</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">dndSettingd</span><span class="o">&gt;</span><span class="p">[</span><span class="kc">true</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">dndSetting</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_DND</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-commands-set_exclude_from_navigator'>SET_EXCLUDE_FROM_NAVIGATOR</h2>
+<p>This command is issued to toggle the visibility of the intercom endpoint in a proxy user interface. This command will result in an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-exclude_from_navigator_changed"><code>EXCLUDE_FROM_NAVIGATOR_CHANGED</code></a> notification to the proxy.</p>
+<h3 id='intercom-state-commands-set_exclude_from_navigator-signature'>Signature</h3>
+
+<p><code>SET_EXCLUDE_FROM_NAVIGATOR ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>Boolean flag indicating the new state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set_exclude_from_navigator-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-commands-set_exclude_from_navigator-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_EXCLUDE_FROM_NAV</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">excludeFromNav</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">excludeFromNav</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_EXCLUDE_FROM_NAV</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-commands-set_send_video'>SET_SEND_VIDEO</h2>
+<p>This command is issued by a proxy consumer to cause the state of the send video setting to change.  This command will result in a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-send_video_changed"><code>SEND_VIDEO_CHANGED</code></a></p>
+<h3 id='intercom-state-commands-set_send_video-signature'>Signature</h3>
+
+<p><code>SET_SEND_VIDEO ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>Boolean flag indicating the new state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set_send_video-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-commands-set_send_video-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_SEND_VIDEO</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">sendVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">sendVideo</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_SEND_VIDEO</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-commands-set_microphone_gain'>SET_MICROPHONE_GAIN</h2>
+<p>This command is issued by a proxy consumer to cause the microphone gain for the indicated intercom device to change.  This command will result in a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-microphone_gain_changed"><code>MICROPHONE_GAIN_CHANGED</code></a> notification to the indicated device.</p>
+<h3 id='intercom-state-commands-set_microphone_gain-signature'>Signature</h3>
+
+<p><code>SET_MICROPHONE_GAIN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>Boolean flag indicating the new state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set_microphone_gain-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-commands-set_microphone_gain-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_MICROPHONE_GAIN</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">microphoneGain</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">microphoneGain</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_MICROPHONE_GAIN</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-commands-set_monitor_mode'>SET_MONITOR_MODE</h2>
+<p>This command will result in a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-monitor_mode_changed"><code>MONITOR_MODE_CHANGED</code></a> notification to the proxy consumer for the indicated intercom device.</p>
+<h3 id='intercom-state-commands-set_monitor_mode-signature'>Signature</h3>
+
+<p><code>SET_ MONITOR_MODE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>Boolean flag indicating the new state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set_monitor_mode-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-commands-set_monitor_mode-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_MONITOR_MODE</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">monitorMode</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">monitorMode</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_MONITOR_MODE</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-commands-set_ringer_volume'>SET_RINGER_VOLUME</h2>
+<p>This command is issued to cause the ringer volume setting to be changed for the indicated intercom device.  This command will result in a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-ringer_volume_changed"><code>RINGER_VOLUME_CHANGED</code></a> notification to the proxy consumer for the indicated intercom device.</p>
+<h3 id='intercom-state-commands-set_ringer_volume-signature'>Signature</h3>
+
+<p><code>SET_RINGER_VOLUME ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>NUM</td>
+<td>A numeric value 0 - 100  indicating the new value for the ringer volume setting</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set_ringer_volume-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-commands-set_ringer_volume-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_RINGER_VOLUME</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">ringerVol</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">ringerVol</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_RINGER_VOLUME</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-commands-set_speaker_volume'>SET_SPEAKER_VOLUME</h2>
+<p>This command is issued by a proxy consumer to cause the current speaker volume setting to be changed.  This command will result in a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-speaker_volume_changed"><code>SPEAKER_VOLUME_CHANGED</code></a> notification to the proxy consumer for the indicated intercom device.</p>
+<h3 id='intercom-state-commands-set_speaker_volume-signature'>Signature</h3>
+
+<p><code>SET_SPEAKER_VOLUME ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>A numeric value 0-100 that indicates the new speaker volume setting</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-commands-set_speaker_volume-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<p><h3 id='intercom-state-commands-set_speaker_volume-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">SET_SPEAKER_VOLUME</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">speakerVol</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">speakerVol</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">SET_SPEAKER_VOLUME</span><span class="o">&gt;</span>
+</code></pre></div></p>
+<h1 id='intercom-state-requests'>Intercom State Requests</h1>
+
+<h2 id='intercom-state-requests-get_current_state'>GET_CURRENT_STATE</h2>
+
+<p>This request is issued to obtain the current device state of the intercom endpoint making the request. Upon receiving the request, the driver should issue a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-current_state_changed">CURRENT_STATE_CHANGED</a> notify.     </p>
+
+<h3 id='intercom-state-requests-get_current_state-signature'>Signature</h3>
+
+<p><code>GET_CURRENT_STATE ()</code></p>
+
+<h3 id='intercom-state-requests-get_current_state-request-parameters'>Request Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='intercom-state-requests-get_current_state-response-parameters'>Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The proxy device id of the intercom endpoint to which this request’s response is sent. This value is used to insure that the response is processed by proper device driver (i.e. the requestor). It is a number that is greater than or equal to zero (0).</td>
+</tr>
+<tr>
+<td>num</td>
+<td>Numeric value indicating the current state of the device. (0=not ready, 1=idle, 2=busy, 3=max calls)</td>
+</tr>
+</tbody></table>
+
+<p>Response Prototype</p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span><span class="o">=</span><span class="err">”</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="err">”</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">currentState</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">currentState</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h2 id='intercom-state-requests-get_state'>GET_STATE</h2>
+
+<p>This request is issued to obtain the device state of a specified intercom endpoint. </p>
+
+<h3 id='intercom-state-requests-get_state-signature'>Signature</h3>
+
+<p><code>GET_STATE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Request Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>idDevice</td>
+<td>This request is issued to obtain the device state of a specified intercom endpoint.</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-requests-get_state-request-prototype'>Request Prototype</h3>
+
+<p><em>See example to the right.</em></p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">GET_STATE</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">idDevice</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">idDevice</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">GET_STATE</span><span class="o">&gt;</span>
+</code></pre></div><h3 id='intercom-state-requests-get_state-response-parameters'>Response Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The proxy device id of the intercom endpoint to which this request’s response is sent. This value is used to insure that the response is processed by proper device driver (i.e. the requestor). It is a number that is greater than or equal to zero (0).</td>
+</tr>
+<tr>
+<td>excludeFromNav</td>
+<td>Boolean flag indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>playDoorChime</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>dndSetting</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>autoAnswer</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>currrentState</td>
+<td>Numeric value indicating the current state of the device. (0=not ready, 1=idle, 2=busy, 3=max calls)</td>
+</tr>
+<tr>
+<td>sendVideo</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>monitorMode</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>ringerVol</td>
+<td>Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+<tr>
+<td>speakerVol</td>
+<td>Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+<tr>
+<td>microphoneGain</td>
+<td>Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+<tr>
+<td>showMainVideo</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>showMirrorVideo</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>cameraEnabled</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>aecEnabled</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<p>Response Prototype</p>
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span><span class="o">=</span><span class="err">”</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="err">”</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">excludeFromNav</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">excludeFromNav</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">playDoorChime</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">playDoorChime</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">dndSetting</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">dndSetting</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">autoAnswer</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">autoAnswer</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">currentState</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">currentState</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">sendVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">sendVideo</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">monitorMode</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">monitorMode</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">ringerVol</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">ringerVol</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">speakerVol</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">speakerVol</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">microphoneGain</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">microphoneGain</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">showMainVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">showMainVideo</span> <span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">showMirrorVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">showMirrorVideo</span> <span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">cameraEnabled</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">cameraEnabled</span> <span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">aecEnabled</span><span class="o">&gt;</span><span class="p">[</span><span class="n">integer</span> <span class="n">value</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">aecEnabled</span> <span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span> 
+</code></pre></div>
+
+<h2 id='intercom-state-requests-get_state_list'>GET_STATE_LIST</h2>
+
+<p>This request is issued to obtain the device state of all of intercom endpoints in the project</p>
+
+<h3 id='intercom-state-requests-get_state_list-signature'>Signature</h3>
+
+<p><code>GET_STATE_LIST ()</code></p>
+
+<h3 id='intercom-state-requests-get_state_list-request-prototype'>Request Prototype</h3>
+
+<p>See example to the right.</p>
+
+<div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">state_list</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">device_state</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">Id1</span><span class="err">”</span><span class="o">&gt;</span> 
+     <span class="n">See</span> <span class="n">GET_STATE</span> <span class="n">response</span> <span class="n">format</span>
+   <span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">device_state</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">Id2</span><span class="err">”</span><span class="o">&gt;</span> 
+     <span class="n">See</span> <span class="n">GET_STATE</span> <span class="n">response</span> <span class="n">format</span>
+   <span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">device_state</span> <span class="n">id</span><span class="o">=</span><span class="err">”</span><span class="n">IdN</span><span class="err">”</span><span class="o">&gt;</span> 
+     <span class="n">See</span> <span class="n">GET_STATE</span> <span class="n">response</span> <span class="n">format</span>
+  <span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">state_list</span><span class="o">&gt;</span>
+</code></pre></div>
+<h1 id='intercom-state-notifications'>Intercom State Notifications</h1>
+
+<h2 id='intercom-state-notifications-auto_answer_changed'>AUTO_ANSWER_CHANGED</h2>
+
+<p>This notification is issued when a call is accepted, it is sent to the initiator and the receiver involved in accepting the specified session.</p>
+
+<h3 id='intercom-state-notifications-auto_answer_changed-signature'>Signature</h3>
+
+<p><code>AUTO_ANSWER_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>int</td>
+<td>autoAnswer: Boolean flag indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-auto_answer_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">id</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">autoAnswer</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">autoAnswer</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-camera_enabled_changed'>CAMERA_ENABLED_CHANGED</h2>
+<p>This notification is issued by the protocol when the endpoint’s Camera Enabled setting has changed.</p>
+<h3 id='intercom-state-notifications-camera_enabled_changed-signature'>Signature</h3>
+
+<p><code>CAMERA_ENABLED_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>int</td>
+<td>cameraEnabled: Boolean flag indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-camera_enabled_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">id</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">cameraEnabled</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">cameraEnabled</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-current_state_changed'>CURRENT_STATE_CHANGED</h2>
+<p>This notification is issued by the protocol  when the endpoint’s current state has changed.</p>
+<h3 id='intercom-state-notifications-current_state_changed-signature'>Signature</h3>
+
+<p><code>CURRENT_STATE__CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>currentState - Numeric value indicating the current state of the device. (0=not ready, 1=idle, 2=busy, 3=max calls)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-current_state_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">currentState</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">currentState</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-device_state_changed'>DEVICE_STATE_CHANGED</h2>
+<p>This notification is issued by the protocol  when the endpoint’s current state has changed.</p>
+<h3 id='intercom-state-notifications-device_state_changed-signature'>Signature</h3>
+
+<p><code>DEVICE_STATE__CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>excludeFromNav</td>
+<td>Boolean flag indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>playDoorChime</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>dndSetting</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>autoAnswer</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>currentState</td>
+<td>Numeric value indicating the current state of the device. (0=not ready, 1=idle, 2=busy, 3=max calls)</td>
+</tr>
+<tr>
+<td>sendVideo</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>monitorMode</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>ringerVol</td>
+<td>Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+<tr>
+<td>speakerVol</td>
+<td>Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+<tr>
+<td>microphoneGain</td>
+<td>Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+<tr>
+<td>showMainVideo</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>showMirrorVideo</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>cameraEnable</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+<tr>
+<td>aecEnabled</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-device_state_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">DEVICE_STATE_CHANGED</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">excludeFromNav</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">excludeFromNav</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">playDoorChime</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">playDoorChime</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">dndSetting</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">dndSetting</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">autoAnswer</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">autoAnswer</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">sendVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">sendVideo</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">currentState</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">currentState</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">monitorMode</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">monitorMode</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">ringerVol</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">ringerVol</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">speakerVol</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">70</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">speakerVol</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">microphoneGain</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">microphoneGain</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">showMainVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">showMainVideo</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">showMirrorVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">showMirrorVideo</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">cameraEnabled</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">cameraEnabled</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">aecEnabled</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">aecEnabled</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">DEVICE_STATE_CHANGED</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-device_state_changed'>DEVICE_STATE_CHANGED</h2>
+<p>This notification is issued by the protocol  when the endpoint’s Do Not Disturb setting has changed. </p>
+<h3 id='intercom-state-notifications-device_state_changed-signature'>Signature</h3>
+
+<p><code>DND_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dndSetting: Boolean flag indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-device_state_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">dndSetting</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">dndSetting</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-exclude_from_navigator_changed'>EXCLUDE_FROM_NAVIGATOR_CHANGED</h2>
+<p>This notification is issued by the protocol  when the endpoint’s Exclude from Navigator setting has changed. </p>
+<h3 id='intercom-state-notifications-exclude_from_navigator_changed-signature'>Signature</h3>
+
+<p><code>EXCLUDE_FROM_NAVIGATOR_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dndSetting: Boolean flag indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-exclude_from_navigator_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">excludeFromNav</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">excludeFromNav</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-microphone_gain_changed'>MICROPHONE_GAIN_CHANGED</h2>
+<p>This notification is issued by the protocol  when the endpoint’s Microphone Gain setting has changed.</p>
+<h3 id='intercom-state-notifications-microphone_gain_changed-signature'>Signature</h3>
+
+<p><code>MICROPHONE_GAIN_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>int</td>
+<td>microphoneGain: Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-microphone_gain_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">microphoneGain</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">microphoneGain</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-monitor_mode_changed'>MONITOR_MODE_CHANGED</h2>
+<p>This notification is issued by the protocol  when the endpoint’s Monitor Mode setting has changed. </p>
+<h3 id='intercom-state-notifications-monitor_mode_changed-signature'>Signature</h3>
+
+<p><code>MONITOR_MODE_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>monitorMode</td>
+<td>Boolean flag indicating the current value of this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-monitor_mode_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">monitorMode</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">monitorMode</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-mute_audio_changed'>MUTE_AUDIO_CHANGED</h2>
+<p>Notification sent to the protocol  when the audio muted value of the intercom has changed.</p>
+<h3 id='intercom-state-notifications-mute_audio_changed-signature'>Signature</h3>
+
+<p><code>MUTE_AUDIO_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>enabled: = the new enabled value (true/false) of the intercom</td>
+</tr>
+</tbody></table>
+
+<h2 id='intercom-state-notifications-ringer_volume_changed'>RINGER_VOLUME_CHANGED</h2>
+
+<p>This notification is issued by the protocol when the endpoint’s ringer volume setting has changed. </p>
+
+<h3 id='intercom-state-notifications-ringer_volume_changed-signature'>Signature</h3>
+
+<p><code>RINGER_VOLUME_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>ringerVol</td>
+<td>Numeric value indicating the current value of this setting. (0 to 100)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-ringer_volume_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">ringerVoL</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">ringerVoL</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-sip_username_changed'>SIP_USERNAME_CHANGED</h2>
+<p>Notification sent to the protocol  when the SIP username value of the intercom has changed.</p>
+<h3 id='intercom-state-notifications-sip_username_changed-signature'>Signature</h3>
+
+<p><code>SIP_USERNAME_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>STR</td>
+<td>username = the new username value of the intercom</td>
+</tr>
+</tbody></table>
+
+<h2 id='intercom-state-notifications-send_video_changed'>SEND_VIDEO_CHANGED</h2>
+
+<p>This notification is issued by the protocol when the endpoint’s Monitor Mode setting has changed. </p>
+
+<h3 id='intercom-state-notifications-send_video_changed-signature'>Signature</h3>
+
+<p><code>SEND_VIDEO_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>BOOL</td>
+<td>sendVideo: Boolean flag indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-send_video_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">sendVideo</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">sendVideo</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-speaker_volume_changed'>SPEAKER_VOLUME_CHANGED</h2>
+<p>This notification is issued by the protocol when the endpoint’s Speaker Volume setting has changed. </p>
+<h3 id='intercom-state-notifications-speaker_volume_changed-signature'>Signature</h3>
+
+<p><code>SPEAKER_VOLUME_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>The proxy device id of the intercom endpoint whose device state information is being returned</td>
+</tr>
+<tr>
+<td>num</td>
+<td>speakerVol: Numeric indicating the current state for this setting. (0=false, 1=true)</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-state-notifications-speaker_volume_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">device_state</span> <span class="n">proxyid</span> <span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">speakerVol</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">speakerVol</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">device_state</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id='intercom-state-notifications-use_camera_changed'>USE_CAMERA_CHANGED</h2>
+<p>Notification sent to the protocol when the use camera value of the intercom has changed.</p>
+<h3 id='intercom-state-notifications-use_camera_changed-signature'>Signature</h3>
+
+<p><code>USE_CAMERA_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>enabled: = the new enabled value (true/false) of the intercom</td>
+</tr>
+</tbody></table>
+<h1 id='intercom-call-group-requests'>Intercom Call Group Requests</h1>
+
+<h2 id='intercom-call-group-requests-get_group_list'>GET_GROUP_LIST</h2>
+
+<p>This request is issued to obtain the group list of all of intercom call groups in the project except for the “All” group. </p>
+
+<h3 id='intercom-call-group-requests-get_group_list-signature'>Signature</h3>
+
+<p><code>GET_GROUP_LIST ()</code></p>
+
+<table><thead>
+<tr>
+<th>Request Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>The group ID of the call group.</td>
+</tr>
+<tr>
+<td>str</td>
+<td>The name of the call group.</td>
+</tr>
+</tbody></table>
+
+<p><h3 id='intercom-call-group-requests-get_group_list-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="o">&lt;</span><span class="n">groups</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">group</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">id</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">id</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">[</span><span class="n">group</span> <span class="n">one</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">id</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">id</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">[</span><span class="n">group</span> <span class="n">two</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">groups</span><span class="o">&gt;</span>
+</code></pre></div></p>
+<h1 id='intercom-capabilities'>Intercom Capabilities</h1>
+
+<h2 id='intercom-capabilities-has_play_door_chime'>has_play_door_chime</h2>
+
+<p>Device supports the ability to play a secondary door chime inanition to the default door chime. This is primarily intended for playing a secondary door chime on Control4 touch panels.</p>
+
+<h3 id='intercom-capabilities-has_play_door_chime-signature'>Signature</h3>
+
+<p><code>&lt;has_play_door_chime&gt;&lt;/has_play_door_chime&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_play_door_chime-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_play_door_chime&gt;</span>false<span class="nt">&lt;/has_play_door_chime&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_camera'>has_camera</h2>
+<p>The device includes a camera and supporting camera functionality. This controls enabling/disabling the use of the Send Video UI in ComposerPro.</p>
+<h3 id='intercom-capabilities-has_camera-signature'>Signature</h3>
+
+<p><code>&lt;has_camera&gt;&lt;/has_camera&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_camera-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_camera&gt;</span>True<span class="nt">&lt;/has_camera&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_display'>has_display</h2>
+<p>Device includes a physical display. Typically a door station has a display where a touch panel may not. Setting this to True enables the device to receive incoming video.</p>
+<h3 id='intercom-capabilities-has_display-signature'>Signature</h3>
+
+<p><code>&lt;has_display&gt;&lt;/has_display&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_display-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_display&gt;</span>True<span class="nt">&lt;/has_display&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_buttons'>has_buttons</h2>
+<p>This capability specifies whether this device type has custom buttons. Its value is a Boolean string. For example: “True” or “False”</p>
+<h3 id='intercom-capabilities-has_buttons-signature'>Signature</h3>
+
+<p><code>&lt;has_buttons&gt;&lt;/has_buttons&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_buttons-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_buttons&gt;</span>True<span class="nt">&lt;/has_buttons&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-is_doorstation'>is_doorstation</h2>
+<p>This capability specifies whether this device type is a door station. Its value is a Boolean string. For example: “True” or “False”</p>
+<h3 id='intercom-capabilities-is_doorstation-signature'>Signature</h3>
+
+<p><code>&lt;is_doorstation&gt;&lt;/is_doorstation&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-is_doorstation-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;is_doorstation&gt;</span>True<span class="nt">&lt;/is_doorstation&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-driver_arch_type'>driver_arch_type</h2>
+<p>This capability is included in the SDK for Control4 internal use. It is used to determine if the driver file is a Control4 driver or a third party driver. <strong>Third party driver developers must pass a value of 5 in this capability.</strong></p>
+<h3 id='intercom-capabilities-driver_arch_type-signature'>Signature</h3>
+
+<p><code>&lt;driver_arch_type&gt;&lt;/driver_arch_type&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>num</td>
+<td>0-5. Device Type Number</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-driver_arch_type-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;driver_arch_type&gt;</span>5<span class="nt">&lt;/driver_arch_type&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_auto_answer'>has_auto_answer</h2>
+<p>A setting of True indicates that the device supports the ability to automatically answer an incoming call. Setting this capability to True will also enable the use of the has auto answer checkbox in ComposerPro. </p>
+<h3 id='intercom-capabilities-has_auto_answer-signature'>Signature</h3>
+
+<p><code>&lt;has_auto_answer&gt;&lt;/has_auto_answer&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_auto_answer-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_auto_answer&gt;</span>false<span class="nt">&lt;/has_auto_answer&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_do_-not_disturb'>has_do_ not_disturb</h2>
+<p>Device supports do not disturb functionality. Setting this to true will enable the use of the Do Not Disturb checkbox in ComposerPro.</p>
+<h3 id='intercom-capabilities-has_do_-not_disturb-signature'>Signature</h3>
+
+<p><code>&lt;has_do_not_disturb&gt;&lt;/has_do_not_disturb&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_do_-not_disturb-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_do_not_disturb&gt;</span>true<span class="nt">&lt;/has_do_not_disturb&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_early_media'>has_early_media</h2>
+<p>Device supports delivery of SIP Early Media. Early media is the preview video and or audio distributed prior to a call being answered. Currently, this is only supported in door stations.</p>
+<h3 id='intercom-capabilities-has_early_media-signature'>Signature</h3>
+
+<p><code>&lt;has_early_media&gt;&lt;/has_early_media&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_early_media-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_early_media&gt;</span>true<span class="nt">&lt;/has_early_media&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_monitor_mode'>has_monitor_mode</h2>
+<p>Device supports the use of display monitor functionality. Setting this to true will also enable the use of the Monitor Mode checkbox in ComposerPro.</p>
+<h3 id='intercom-capabilities-has_monitor_mode-signature'>Signature</h3>
+
+<p><code>&lt;has_monitor_mode&gt;&lt;/has_monitor_mode&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_monitor_mode-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_monitor_mode&gt;</span>true<span class="nt">&lt;/has_monitor_mode&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-use_microphone'>use_microphone</h2>
+<p>The driver has the ability to physically control the microphone level on the device.</p>
+<h3 id='intercom-capabilities-use_microphone-signature'>Signature</h3>
+
+<p><code>&lt;use_microphone&gt;&lt;/use_microphone&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-use_microphone-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;use_microphone&gt;</span>true<span class="nt">&lt;/use_microphone&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-use_speaker'>use_speaker</h2>
+<p>The driver has the ability to physically control the speaker level on the device.</p>
+<h3 id='intercom-capabilities-use_speaker-signature'>Signature</h3>
+
+<p><code>&lt;use_speaker&gt;&lt;/use_speaker&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-use_speaker-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;use_speaker&gt;</span>true<span class="nt">&lt;/use_speaker&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-use_ringer'>use_ringer</h2>
+<p>The driver has the ability to physically control the ringer level on the device.</p>
+<h3 id='intercom-capabilities-use_ringer-signature'>Signature</h3>
+
+<p><code>&lt;use_ringer&gt;&lt;/use_ringer&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-use_ringer-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;use_ringer&gt;</span>true<span class="nt">&lt;/use_ringer&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_high_definition'>has_high_definition</h2>
+<p>Capability applicable to touch panels. The driver has the ability to turn camera video quality to 720p, as opposed to 640x480. </p>
+<h3 id='intercom-capabilities-has_high_definition-signature'>Signature</h3>
+
+<p><code>&lt;has_high_definiton&gt;&lt;/as_high_definiton&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='intercom-capabilities-has_high_definition-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_high_definiton&gt;</span>true<span class="nt">&lt;/has_high_definiton&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-has_echo_calibration'>has_echo_calibration</h2>
+<p>This capability is included in the SDK for Control4 internal use.</p>
+<h3 id='intercom-capabilities-has_echo_calibration-signature'>Signature</h3>
+
+<p><code>&lt;has_echo_calibration&gt;&lt;/has_echo_calibration&gt; </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<p><h3 id='intercom-capabilities-has_echo_calibration-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_echo_calibration&gt;</span>false<span class="nt">&lt;/has_echo_calibration&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='intercom-capabilities-audio_codecs_supported'>audio_codecs_supported</h2>
+<p><strong>This Capability has been deprecated and is no longer applicable to driver development efforts. </strong></p></p>
+
+<h2 id='intercom-capabilities-has_intercom'>has_intercom</h2>
+
+<p><strong>This Capability has been deprecated and is no longer applicable to driver development efforts. </strong></p>
+
+<h2 id='intercom-capabilities-has_video_intercom'>has_video_intercom</h2>
+
+<p><strong>This Capability has been deprecated and is no longer applicable to driver development efforts. </strong></p>
+
+<h2 id='intercom-capabilities-has_mcast_emedia'>has_mcast_emedia</h2>
+
+<p><strong>This Capability has been replaced and is no longer applicable to driver development efforts. </strong></p>
+
+<p>For more information see the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-capabilities-has_early_media">has_early_media</a> capability.</p>
+
+<h2 id='intercom-capabilities-can_change_multicast_ip'>can_change_multicast_ip</h2>
+
+<p><strong>This Capability has been deprecated and is no longer applicable to driver development efforts. </strong></p>
+
+<h2 id='intercom-capabilities-can_change_transport'>can_change_transport</h2>
+
+<p><strong>This Capability has been deprecated and is no longer applicable to driver development efforts. </strong></p>
+
+<h2 id='intercom-capabilities-video_codecs_supported'>video_codecs_supported</h2>
+
+<p><strong>This Capability has been deprecated and is no longer applicable to driver development efforts. </strong></p>
+
+<h2 id='intercom-capabilities-can_set_aec'>can_set_aec</h2>
+
+<p><strong>This Capability has been deprecated and is no longer applicable to driver development efforts. </strong></p>
+
+<h2 id='intercom-capabilities-number_ring_buttons'>number_ring_buttons</h2>
+
+<p>This capability is included in the SDK for Control4 internal use.</p>
+
+<h2 id='intercom-capabilities-can_detect_button_press'>can_detect_button_press</h2>
+
+<p>This capability is included in the SDK for Control4 internal use.</p>
+
+<h2 id='intercom-capabilities-can_detect_button_release'>can_detect_button_release</h2>
+
+<p>This capability is included in the SDK for Control4 internal use.</p>
+<h1 id='intercom-events'>Intercom Events</h1>
+
+<p>Intercom Events are tied to programming in ComposerPro. Events are also <a href="https://snap-one.github.io/docs-driverworks-fundamentals/#events-history-event-notifications">recored in history</a> and can be used to trigger notifications using the History Agent.</p>
+
+<p>For example, it’ possible to trigger a notification on a mobile phone based on an incoming call (Incoming Call Event) that occurs on a door station or any other device in the project that uses the Intercom Proxy.</p>
+
+<h2 id='intercom-events-intercom-events'>Intercom Events</h2>
+
+<p>The following Events are supported by the Intercom Proxy. They include:</p>
+
+<p><code>Incoming Call</code> Fired when there is a new incoming call. </p>
+
+<p><code>Outgoing Call</code> Fired when there is a new outgoing intercom call.</p>
+
+<p><code>Call Setup</code>Fired when a new call is setup.</p>
+
+<p><code>Call Accepted</code> Fired when an incoming call is accepted by the receiver.</p>
+
+<p><code>Call Rejected</code> Fired when an incoming call is rejected by the receiver.</p>
+
+<p><code>Call Started</code> Fired when there is new call session is started.</p>
+
+<p><code>Call Ended</code> Fired when an existing call session is ended</p>
+
+<p><code>Call Paused</code> Fired when an existing call session is paused.</p>
+
+<p><code>Call Resumed</code> Fired when an existing call session is resumed.</p>
+
+<p><code>Do Not Disturb Changed</code> Fired when the “Do Not Disturb” setting is changed.</p>
+
+<p><code>Auto Answer Changed</code> Fired when the “Auto Answer” setting is changed. </p>
+
+<p><code>Monitor Mode Changed</code> Fired when the “Monitoring” setting is changed.</p>
+
+<p><code>Send Video Changed</code> Fired when the “Send Video” setting is changed. </p>
+
+<p><code>Ringer Volume Changed</code> Fired when the “Ringer Volume” setting is changed.</p>
+
+<p><code>Speaker Volume Changed</code> Fired when the “Speaker Volume” setting is changed. </p>
+
+<p><code>Microphone Gain Changed</code> Fired when the “Microphone Gain” setting is changed </p>
+
+<p><code>Custom Button N Pressed</code> Fired when the “Custom Button N” is pressed. (where N = 0 or 1) </p>
+
+<p><code>Custom Button N Released</code> Fired when the “Custom Button N” is released. (where N = 0 or 1) </p>
+<h1 id='intercom-variables'>Intercom Variables</h1>
+
+<h2 id='intercom-variables-intercom-variables'>Intercom Variables</h2>
+
+<p>The following Variables are supported by the Intercom Proxy itself. They include:</p>
+
+<p>CALL_DURATION - This variable supports ComposerPro programming based on a set call duration time.     </p>
+
+<p>MICROPHONE_GAIN - This variable supports ComposerPro programming based on a change to the microphone’s gain level. </p>
+
+<p>RINGER_VOLUME - This variable supports ComposerPro programming based on a change to the device’s ringer volume  level. </p>
+
+<p>SPEAKER_VOLUME - This variable supports ComposerPro programming based on a change to the device’s speaker volume level. </p>
+<h1 id='intercom-conditionals'>Intercom Conditionals</h1>
+
+<h2 id='intercom-conditionals-intercom-conditionals'>Intercom Conditionals</h2>
+
+<p>The following Conditionals are supported by the Intercom Proxy itself. They include:</p>
+
+<p><code>Remote Name Matched</code> Returns true if there is an incoming/outgoing call to a specified endpoint. </p>
+
+<p><code>Do Not Disturb</code> Returns true if “Do Not Disturb” is enabled on the current endpoint. </p>
+
+<p><code>Auto Answer</code> Returns true if “Auto Answer” is enabled on the current endpoint. </p>
+
+<p><code>Send Video</code> Returns true if “Send Video” is enabled on the current endpoint. </p>
+
+<p><code>Monitor Mode</code> Returns true if “Monitoring” is enabled on the current endpoint. </p>
+
+<p><code>In A Call</code> Returns true if there is an active session on the current endpoint. </p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="lua">lua</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
