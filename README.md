@@ -1,4 +1,3 @@
-# docs-driverworks-proxyprotocol-intercom
- Intercom Proxy SDK documentation
+# Driverworks Proxy/Protocol Guide - intercom
 
-Should be two column
+Intercom Proxy SDK documentation
