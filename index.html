@@ -323,6 +323,9 @@
             <a href="#what-s-new" class="toc-h1 toc-link" data-title="What’s New">What’s New</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#what-s-new-what-s-new-in-3-4-2" class="toc-h2 toc-link" data-title="What’s New in 3.4.2">What’s New in 3.4.2</a>
+                  </li>
+                  <li>
                     <a href="#what-s-new-what-s-new-in-3-4-1" class="toc-h2 toc-link" data-title="What’s New in 3.4.1">What’s New in 3.4.1</a>
                   </li>
                   <li>
@@ -354,26 +357,6 @@
                   </li>
                   <li>
                     <a href="#what-s-new-what-was-new-in-3-1-0" class="toc-h2 toc-link" data-title="What was New in 3.1.0">What was New in 3.1.0</a>
-                  </li>
-                  <li>
-                    <a href="#what-s-new-what-was-new-in-o-s-3" class="toc-h2 toc-link" data-title="What was New in O.S.3">What was New in O.S.3</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#intercom-proxy-terminology" class="toc-h1 toc-link" data-title="Intercom Proxy Terminology">Intercom Proxy Terminology</a>
-          </li>
-          <li>
-            <a href="#intercom-proxy-best-practices" class="toc-h1 toc-link" data-title="Intercom Proxy Best Practices">Intercom Proxy Best Practices</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#intercom-proxy-best-practices-overview" class="toc-h2 toc-link" data-title="Overview">Overview</a>
-                  </li>
-                  <li>
-                    <a href="#intercom-proxy-best-practices-storing-session-ids" class="toc-h2 toc-link" data-title="Storing Session IDs">Storing Session IDs</a>
-                  </li>
-                  <li>
-                    <a href="#intercom-proxy-best-practices-using-the-remoteaor-property" class="toc-h2 toc-link" data-title="Using the RemoteAor Property">Using the RemoteAor Property</a>
                   </li>
               </ul>
           </li>
@@ -727,7 +710,7 @@
 
 <p><strong>Copyright</strong></p>
 
-<p>Copyright 2023 Snap One, LLC. All rights reserved.</p>
+<p>Copyright 2024 Snap One, LLC. All rights reserved.</p>
 
 <p>The above copyright notice applies to all content in this repository unless otherwise stated explicitly herein that a third-party’s copyright applies.</p>
 
@@ -754,7 +737,7 @@ Salt Lake City, UT 84020 USA</p>
 
 <h2 id='introduction-proxies-commands'>Proxies (Commands)</h2>
 
-<p>A proxy driver is an interface to the Control4 system for a set of devices that share common functionality. For instance, most DVD disc changers have common controls such as PLAY, STOP, PAUSE and FAST FORWARD.  The disc changer proxy allows for a common user interface to control all disc changers.  The Control4 system (Director) sends information to and receives information from the proxy drivers.  The proxy drivers send information to and receives information from the protocol drivers.
+<p>A proxy driver is an interface to the Control4 system for a set of devices that share common functionality. For instance, most Intercom have common controls such as ACCEPT CALL, END CALL and MUTE CALL.  The intercom proxy allows for a common user interface to control all intercom systems.  The Control4 system (Director) sends information to and receives information from the proxy drivers.  The proxy drivers send information to and receives information from the protocol drivers.
 Remember, your DriverWorks driver interacts with the proxy driver which then interacts with the system.  As a driver developer you will be relying on this proxy to provide status (notification) to the Control4 system for the device you are controlling.  You will also receive commands from the system that you will act on to control the device.  These commands and notifications are at the heart of what you will be implementing in your driver.  Essentially your driver is becoming the go-between from the Control4 system and your device with the proxy driver giving structure to the commands and notifications which you will be implementing.
 Your driver can facilitate communications with multiple types of proxies for a single device. As an example, a Security System driver will utilize both the Security proxy and the Contacts proxy. These additional proxies are configured in the &lt;connections&gt; section of the .c4z.</p>
 
@@ -763,411 +746,55 @@ Your driver can facilitate communications with multiple types of proxies for a s
 <p>Two similar devices may have the same functionality but utilize a very different command set.  A protocol driver provides the device-specific information needed to communicate with the Control4 system.  In the case of DriverWorks, the DriverWorks driver is the protocol driver.  When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.  In the case of DriverWorks, the DriverWorks driver is the protocol driver. When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.</p>
 <h1 id='what-s-new'>What’s New</h1>
 
+<h2 id='what-s-new-what-s-new-in-3-4-2'>What’s New in 3.4.2</h2>
+
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.4.2.</p>
+
 <h2 id='what-s-new-what-s-new-in-3-4-1'>What’s New in 3.4.1</h2>
 
-<p>There were no modifications to the Proxy and Protocol Guide in conjunction with O.S. Release 3.4.1.</p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.4.1.</p>
 
-<h2 id='what-s-new-what-s-new-in-3-4-0'>What’s New in 3.4.0</h2><h3 id='what-s-new-what-s-new-in-3-4-0-blind-proxy'>Blind Proxy</h3>
-<p>A new capability has been added to the proxy called <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#blind-capabilities-always_send_level">always_send_level</a>. If value is true, then the SetTargetLevel commands are always sent regardless of current level values. This is useful if the blind device does not support two-way communication and is controlled outside of the Control4 operating system. </p>
-<h3 id='what-s-new-what-s-new-in-3-4-0-camera-proxy'>Camera Proxy</h3>
-<p>Beginning with O.S. 3.4.0, camera drivers have the ability to distribute audio to devices running Navigator. If a camera supports the proper <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-audio-distribution">CODEC</a> and the camera microphone has been enabled in the appropriate interface a new audio button will appear at the bottom of the single-camera view. This will allow the user to hear live audio with the live video.</p>
-<h3 id='what-s-new-what-s-new-in-3-4-0-generic-media-player-proxy'>Generic Media Player Proxy</h3>
-<p>A new capability has been added to the proxy called <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#generic-media-player-capabilities-allow_audio_pathing">allow_audio_pathing</a>. This capability is applicable in the scenario where the AV Switch proxy is included as a secondary proxy to the Generic Media Player Proxy. It is useful  when modeling streaming media devices that require minidrivers.</p>
-<h3 id='what-s-new-what-s-new-in-3-4-0-light-v2-proxy'>Light (v2) Proxy</h3>
-<p>The following color conversion functions have been modified in 3.4.0. The gamut parameter now receives a new valid string of: &quot;custom”. See the links below for more information.</p>
+<h2 id='what-s-new-what-s-new-in-3-4-0'>What’s New in 3.4.0</h2>
 
-<p>RGB functions:
-- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorrgbtoxy">ColorRGBtoXY</a>
-- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytorgb">ColorXYtoRGB</a></p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.4.0.</p>
 
-<p>HSV functions:
-- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorhsvtoxy">ColorHSVtoXY</a>
-- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytohsv">ColorXYtoHSV</a></p>
+<h2 id='what-s-new-what-s-new-in-3-3-2'>What’s New in 3.3.2</h2>
 
-<h2 id='what-s-new-what-s-new-in-3-3-2'>What’s New in 3.3.2</h2><h3 id='what-s-new-what-s-new-in-3-3-2-camera-proxy'>Camera Proxy</h3>
-<p><strong>Support for Dynamic Camera Streams</strong></p>
-
-<p>Camera drivers can now implement a new <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">dynamic streams API</a> to provide a list of streams that the Navigators can pick from. </p>
-<h3 id='what-s-new-what-s-new-in-3-3-2-light-v2-proxy'>Light V2 Proxy</h3>
-<p><strong>Capabilities that have been Added</strong></p>
-
-<p>A new feature has been delivered in O.S. 3.3.2 which allows dealers and customers to specify how a light&#39;s brightness behaves when the light is turned on. The functionality includes:</p>
-
-<ul>
-<li>Preset - Light turns on to a preset level.</li>
-<li>Previous - Light turns on to the previous light level.</li>
-<li>Default On - Provided for backwards compatibility and is the same as setting Preset to On.</li>
-</ul>
-
-<p>Driver developers must opt-in to this new feature and which parts it wants to support via the following new capabilities:</p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_on-mode_preset">brightness_on_mode_preset</a> has been included to enable the brightness presets for &quot;On Mode&quot; behavior for a light.</p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_on_mode_previous">brightness_on_mode_previous</a> has been included to enable the Previous On &quot;On Mode&quot; brightness  behavior for a light.</p>
-
-<p>A new feature was created to allow dealers and customers to specify how a light&#39;s color behaves when a light is turned on. The functionality includes:</p>
-
-<ul>
-<li>Color Fade - Color behavior such as Dim to Warm</li>
-<li>Preset - Color changes to a preset.</li>
-<li>Previous - Color changes to the previous color value.</li>
-<li>Default On - Provided for backwards compatibility and is the same as setting Preset to On.</li>
-</ul>
-
-<p>Driver developers must opt-in to this new feature and which parts it wants to support via the following new capabilities:</p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_fade">color_on_mode_fade</a> has been included to enable the Fade On &quot;On Mode&quot; behavior, such as Dim to Warm, for a light.</p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_preset">color_on_mode_preset</a> has been included to enable presets for use with &quot;On Mode&quot; behavior for a light.</p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_previous">color_on_mode_previous</a> has been included to enable the Previous On &quot;On Mode&quot; behavior for a light.</p>
-
-<p>Additionally,  the following new capabilities have been included in 3.3.2:</p>
-
-<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_rate_max">brightness_rate_max</a> has been included in support of drivers without buttons. This capability allows these driver to no longer need to define click and hold maximum rates.</p>
-
-<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_rate_min">brightness_rate_min</a> has been included in support of drivers without buttons. This capability allows these driver to no longer need to define click and hold minimum rates.</p>
-
-<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_brightness_stop">supports_brightness_stop</a> has been included if a light brightness transition can be stopped during a ramp. </p>
-
-<p><strong>Capabilities that have been Deprecated</strong></p>
-
-<p>fixed_ramp_rate - Use <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_min">click_rate_min</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_max">click_rate_max</a> instead.</p>
-
-<p>has_fixed_ramp_rate - Use <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_min">click_rate_min</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_max">click_rate_max</a> instead.</p>
-
-<p>num_buttons</p>
-
-<p>ramp_level</p>
-
-<p>min_max</p>
-
-<p>on_off</p>
-
-<p>buttons_are_virtual</p>
-
-<p><strong>Commands that have been Added</strong></p>
-
-<p>Note: Enforcement of valid minimum and maximum values for many Light v2 commands are being enforced in conjunction with 3.3.2. </p>
-
-<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-add_driver_color_preset">ADD_DRIVER_COLOR_PRESET</a> has been included to add a new driver specific color preset.</p>
-
-<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-delete_driver_-color_-preset">DELETE_DRIVER_COLOR_PRESET</a> has been added to remove a driver configured color preset. </p>
-
-<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-dynamic_off">DYNAMIC_OFF</a> has been added to support UIs with an off command to pair with the DYNAMIC_ON command.</p>
-
-<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-dynamic_on">DYNAMIC_ON</a> has been added to allows UI&#39;s and programming to &quot;turn on&quot; a light involving both brightness and color in a single command</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-modify_driver_color_preset">MODIFY_DRIVER_COLOR_PRESET</a> has been included to change an existing driver color preset.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_stop">SET_BRIGHTNESS_STOP</a> has been added to stop a ramp if in progress.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_stop">SET_COLOR_STOP</a> has been added to stops a ramp of color if in progress.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_on_mode">SET_BRIGHTNESS_ON_MODE</a> has been added to maintain the On preset value.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_rate_default">SET_BRIGHTNESS_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to retrieve the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_rate_default">UPDATE_BRIGHTNESS_RATE_DEFAULT</a> value.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_on_mode">SET_COLOR_ON_MODE</a>  has beed added define color on mode.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_rate_default">SET_COLOR_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to retrieve the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_rate_default">UPDATE_COLOR_RATE_DEFAULT</a> value.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_on_mode">UPDATE_BRIGHTNESS_ON_MODE</a> has been added to obtain how a light should turn on with regards to brightness.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_rate_default">UPDATE_BRIGHTNESS_RATE_DEFAULT</a> has been added to provide a default value when a rate change is not provided.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_preset">UPDATE_BRIGHTNESS_PRESET</a> has beeb added to send a command when a press is changed.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_on_mode">UPDATE_COLOR_ON_MODE</a> has been added to obtain how a light should turn on with regards to color.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_preset">UPDATE_COLOR_PRESET</a> has been added to manage On and Dim values across various brands and models of lights.</p>
-
-<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_rate_default">UPDATE_COLOR_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to update the color rate default value.</p>
-
-<p><strong>Commands that have been Modified</strong></p>
-
-<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET</a> command has been enhanced with new parameters to support hue, saturation and presets. Additionally, this command previously included a parameter of RATE. This parameter name has changed to LIGHT_COLOR_TARGET_RATE.</p>
-
-<p><strong>Commands that have been Deprecated</strong></p>
-
-<p>GET_LIGHT_LEVEL </p>
-
-<p>GET_CONNECTED_STATE </p>
-
-<p>GET_PROPERTIES </p>
-
-<p><strong>Conditionals that have been Added</strong></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_BRIGHTNESS</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_BRIGHTNESS_TARGET</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_COLOR_TARGET</a> </p>
-
-<p><strong>Notifications that have been Modified</strong></p>
-
-<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_brightness_changing">LIGHT_BRIGHTNESS_CHANGING</a> notify has been modified to include two new optional parameters: LIGHT_BRIGHTNESS_CURRENT_PRESET_ID and LIGHT_BRIGHTNESS_TARGET_PRESET_ID.</p>
-
-<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changing">LIGHT_COLOR_CHANGING</a> notify has been modified to include parameters for Preset IDs. Additionally, this notify previously included a parameter of RATE. This parameter name has changed to LIGHT_COLOR_TARGET_RATE.</p>
-
-<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changed">LIGHT_COLOR_CHANGED</a> notify has been modified to include a parameter for a Preset ID.</p>
-
-<p><strong>Variables that have been Added</strong></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-variables">Brightness Target Ramp Rate in Milliseconds</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-variables">Brightness Target Rate Remaining in Milliseconds</a></p>
-
-<p><strong>Variables that have been Deprecated</strong></p>
-
-<p>PRESET_LEVEL has been deprecated as the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_on_mode">brightness_on_mode_preset</a> capability contains this value. </p>
-
-<p><strong>Known Issue(s)</strong></p>
-
-<p><em>Color Lighting Control may not Work on Some Drivers</em></p>
-
-<p>Currently, there is a known problem with color control not working on drivers that are looking for a RATE parameter in the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET </a>command. The RATE parameter was not correctly implemented due to the limits of support for color rate ramping in previous versions. We are finalizing the changes to make this fully work in 3.3.2. As a result, the “RATE” parameter name has been changed to “LIGHT_COLOR_TARGET_RATE”.</p>
-
-<p><em>Button Link Binding for Brightness Stop Functionality not Working</em></p>
-
-<p>A defect in 3.3.2 prevents keypad buttons bound to the Proxy’s BUTTON_LINK binding for Brightness Stop from working. This will be resolved in 3.3.3.</p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.3.2.</p>
 
 <h2 id='what-s-new-what-s-new-in-3-3-1'>What’s New in 3.3.1</h2>
 
-<p><strong>Light V2 Proxy</strong></p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.3.1.</p>
 
-<p>The capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_trace_tolerance">color_trace_tolerance</a> has been modified to accept a Delta value of &gt; .01. When provided, the CIELa*b* tolerance formula is used to determining if a color is the as another color in the system.</p>
+<h2 id='what-s-new-what-s-new-in-3-3-0'>What’s New in 3.3.0</h2>
 
-<p>The following Conversion Commands have been enhanced to include an optional parameter: gamut. This parameter allows for the specification of a gamut type for use in the conversions.</p>
-
-<ul>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorhsvtoxy">ColorHSVtoXY</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytohsv">ColorXYtoHSV</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorrgbtoxy">ColorRGBtoXY</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytorgb">ColorXYtoRGB</a></li>
-</ul>
-
-<p><strong>Camera Proxy</strong></p>
-
-<p>The Camera Proxy documentation has been has enhanced to include new information regarding:</p>
-
-<ul>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Camera Streams</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Driver Support for Multiple Streams</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Support for Caching URLS</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-extras-interface-library">Support for The Extras Interface Library</a> </li>
-</ul>
-
-<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-get_stream_urls">GET_STREAM_URLS</a> has been added. It is used to obtain URLs for a camera that does not have a constant URL like a Cloud based camera or for cameras that have a wider range of features and configurable options that can produce better customer experiences using various client</p>
-
-<p>A new notification: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-protocol-notifications-stream_urls_ready">STREAM_URLS_READY</a> has been added. This notify is used as a follow up to a GET_STREAM_URLS Synchronous call. This Notify will let a UI know that the URL information they requested is ready. </p>
-
-<p>New capabilities added to the Camera proxy include:  </p>
-
-<ul>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-dynamic_urls_use_type">dynamic_urls_use_type</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-requires_dynamic_stream_urls">requires_dynamic_stream_urls</a></li>
-</ul>
-
-<p>Dynamic Presets are now supported within the Camera Proxy.  The following preset functionality has been include: </p>
-
-<ul>
-<li>Save new presets.</li>
-<li>Change preset name.</li>
-<li>Recapture/update existing preset.</li>
-<li>Reorder presets.</li>
-<li>Delete a preset.</li>
-</ul>
-
-<p>Dynamic Presets require the following new Capability:</p>
-
-<ul>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_dynamic_presets">has_dynamic_presets</a></li>
-</ul>
-
-<p>Dynamic Presets require the following new Notifications:</p>
-
-<ul>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-protocol-notifications-dynamic_urls_changed">DYNAMIC_URLS_CHANGED</a></li>
-</ul>
-
-<p>Dynamic Presets require the following new Commands:</p>
-
-<ul>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-select_preset">SELECT_PRESET</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-change_preset_name">CHANGE_PRESET_NAME</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-modify_preset">MODIFY_PRESET</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-delete_preset">DELETE_PRESET</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-change_preset_order">CHANGE_PRESET_ORDER</a></li>
-</ul>
-
-<p>The following existing Camera Proxy capabilities are now Dynamic Capabilities:</p>
-
-<ul>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_-pan">has_pan</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_tilt">has_tilt</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_zoom">has_zoom</a></li>
-<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_home">has_home</a></li>
-</ul>
-
-<h2 id='what-s-new-what-s-new-in-3-3-0'>What’s New in 3.3.0</h2><h3 id='what-s-new-what-s-new-in-3-3-0-light-proxy-color-enhancements'>Light Proxy Color Enhancements</h3>
-<p>This release of the 3.3.0 beta Proxy and Protocol Guide has been delivered to support the Light Proxy’s new color management functionality. This includes:</p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-capabilities'>Light V2 Proxy Capabilities</h3>
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_correlated_temperature_max">color_correlated_temperature_max</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_correlated_temperature_min">color_correlated_temperature_min</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_behavior">color_rate_behavior</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_max">color_rate_max</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_min">color_rate_min</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_trace_tolerance">color_trace_tolerance</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_color">supports_color</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_color_correlated_temperature">supports_color_correlated_temperature</a></p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-commands'>Light V2 Proxy Commands</h3>
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET</a></p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-conversion-commands'>Light V2 Proxy Conversion Commands</h3>
-<p>This section lists the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands">Commands</a> used for converting to/from hue, saturation and lightness (HSV) and red, blue and green (RGB).</p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-conditionals'>Light V2 Proxy Conditionals</h3>
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_COLOR</a></p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-protocol-notifications'>Light v2 Protocol Notifications</h3>
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changed">LIGHT_COLOR_CHANGED</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changing">LIGHT_COLOR_CHANGING</a></p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-events'>Light V2 Proxy Events</h3>
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-events">light_color_changed</a></p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-events">light_color_changing</a></p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-extras'>Light V2 Proxy Extras</h3>
-<p>New supporting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-extras-interface-library">documentation</a>.</p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-advanced-lighting-scene-agent'>Advanced Lighting Scene Agent </h3>
-<p>New supporting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#advanced-lighting-scene-agent">documentation</a>.</p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-light-driver-development-best-practices'>Light Driver Development Best Practices</h3>
-<p>A new section has been added to the Light V2 proxy content including <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-driver-development-best-practices">best practice recommendations</a> for light driver developers.</p>
-<h3 id='what-s-new-what-s-new-in-3-3-0-audio-video-switch-display-adjustable-bindings'>Audio Video Switch Display Adjustable Bindings</h3>
-<p>O.S. releases 3.3.0 provides the ability to hide <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#display-adjustable-av-switch-bindings">AV Switch Bindings</a> that are not being used. This feature has been provided to better manage the UI display within ComposerPro.</p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.3.0.</p>
 
 <h2 id='what-s-new-what-s-new-in-3-2-3'>What’s New in 3.2.3</h2>
 
-<p><strong>Audio Equalization available on Navigators</strong></p>
-
-<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#amplifier-navigator-eq">Amplifier</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#audio-video-switch-navigator-eq">AV Switch</a> Proxies have been enhanced to support the ability to display audio EQ functions on devices running Navigator. The enhancement includes a set of new Proxy Commands, Notifications and Capabilities to support this functionality.</p>
-
-<p><strong>Dynamic Transport Controls on Navigators</strong></p>
-
-<p>Audio Video drivers now have the ability to define which <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-transport-controls-in-navigator">transport controls</a> are displayed on Navigators. This includes which buttons appear on the Button Bar as well as the Media Dashboard. This enhancement allows for the appropriate transport controls being displayed for each AV device.</p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.2.3.</p>
 
 <h2 id='what-s-new-what-s-new-in-3-2-2'>What’s New in 3.2.2</h2>
 
-<p><em>There were no changes to this content for Operating System 3.2.2.</em></p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.2.2.</p>
 
 <h2 id='what-s-new-what-s-new-in-3-2-1'>What’s New in 3.2.1</h2>
 
-<p><em>There were no changes to this content for Operating System 3.2.1.</em></p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.2.1.</p>
 
-<p><h2 id='what-s-new-what-s-new-in-3-2-0'>What’s New in 3.2.0</h2><h3 id='what-s-new-what-s-new-in-3-2-0-proxies-that-were-modified'>Proxies that were Modified** </h3>
-<p><strong>Security Proxy</strong>
-The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-partition-notifications-request_default_user_code_">REQUEST_DEFAULT_USER_CODE</a> partition notification was added as a mechanism for the protocol driver
-to initiate the communication to get that default user code upon driver update.</p></p>
+<h2 id='what-s-new-what-s-new-in-3-2-0'>What’s New in 3.2.0</h2>
 
-<p>The following Security Protocol Notifications were deprecated from the SDK: ALARM, ALARM_CLEAR, AWAY, DISARM, HOME, TROUBLE. Please see the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-panel-notifications">Security Panel Notification</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-partition-notifications">Security Partition Notification</a> areas for the latest list of Notifies.</p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.2.0.</p>
 
-<p><h2 id='what-s-new-what-was-new-in-3-1-2'>What was New in 3.1.2</h2><h3 id='what-s-new-what-was-new-in-3-1-2-proxies-that-were-deprecated'>Proxies that were Deprecated** </h3>
-<p>The following Proxies were deprecated from the Proxy and Protocol Guide:</p></p>
+<h2 id='what-s-new-what-was-new-in-3-1-2'>What was New in 3.1.2</h2>
 
-<ul>
-<li>iPod</li>
-<li>Load Controller</li>
-</ul>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.1.2.</p>
 
-<p><h2 id='what-s-new-what-was-new-in-3-1-0'>What was New in 3.1.0</h2><h3 id='what-s-new-what-was-new-in-3-1-0-proxies-that-were-modified'>Proxies that were Modified** </h3>
-<p><strong>Light V2 Proxy</strong>
-light sample.c4i - A sample driver has been included to assist with better understanding the basic flow of commands from the Light Proxy as well as receiving protocol notifications. The driver can be found in the Samples directory under the root level of the DriverWorks SDK.zip file</p></p>
+<h2 id='what-s-new-what-was-new-in-3-1-0'>What was New in 3.1.0</h2>
 
-<p><strong>Media Service Proxy</strong>
-Detail Screen Type - Information regarding the implementation of the Detail Type Screen has been added to the documentation.</p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.1.0.</p>
 
-<p><h2 id='what-s-new-what-was-new-in-o-s-3'>What was New in O.S.3</h2><h3 id='what-s-new-what-was-new-in-o-s-3-proxies-that-were-modified'>Proxies that were Modified** </h3>
-<p><strong>KeyPad Proxy</strong></p></p>
-
-<p>New Button Linking functionality has been added to the Proxy. Button Linking supports the ability of a driver interacting with a second driver using Button State and Button LED State. </p>
-
-<p><strong>Light (V2) Proxy</strong>
-LightV2 Proxy has been significantly enhanced in this release. It is recommended that Light Driver writers thoroughly review the Proxy content in this release. The changes included not only impact drivers written against OS 3. Previously delivered Light Proxy elements have been modified or in some cases deprecated. </p>
-
-<p>In OS 3, the proxy has been conceptually split into two components. The first being a Wall Control/Keypad portion and the second is a redesigned Light portion.The Light portion has been developed as a Bulb Library. The ultimate goal of the Bulb Library is to support ,more versatility for drivers to interrogate, group, control and manage individual drivers and bulbs. Bulb color, target level, minimum and maximum levels, cold start timing and other features are implemented in the Bulb Library. Dynamic Capabilities have also been added to the Light Portion. Note that all changes maintain backwards compatibility for driver side interaction. However, Navigators will have functionality deprecated due to performance reasons or improved ways of communicating with the driver.</p>
-
-<p><strong>Media Service Proxy</strong>
-Favoriting: In conjunction with the ability to &quot;Favorite&quot; Navigator UI screens in OS 3, drivers written using the Media Service Proxy can now provide the ability for end users to designate favorite media delivered through an Media Service Proxy driver such as Playlists, Albums, Tracks, Stations, Movies, TV Shows, etc. </p>
-
-<p>DashboardChanged Event: The DashboardChanged event now includes content on the use of custom icons and actions.</p>
-
-<p>Driver Notification Context Example: New code examples on have been added to the Media Service Proxy Driver Notification Prototype section in the Appendix.</p>
-
-<p><strong> Best Practices</strong>
-A new section called Best Practices has been added to the Proxy and Protocol Guide. This section contains information regarding the use cases that fall outside of the typical Proxy/Protocol driver implementation. This release contains Best Practice content on the following:</p>
-
-<p>Using the new Proxy-less command UPDATE PROPERTY. This is a non proxy-specific function that can be called from any device to change a property of any other device.</p>
-
-<p>OS 3 Navigator UI and Volume Control - Managing Volume Commands in conjunction with the use of OS 3&#39;s new volume control slider on the Control4 UI.</p>
-<h1 id='intercom-proxy-terminology'>Intercom Proxy Terminology</h1>
-
-<p>The following terms are specific to the Control4 Intercom Proxy and their use in developing a door station or door station like driver. Note that this content does not include the scope of developing a touch panel to support intercom use.</p>
-
-<p><strong>Intercom Call Commands</strong> –  Includes a set of commands that are sent from the Intercom Proxy to the door station device that is supported by your driver. An example of an Intercom Proxy Command is <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-start-_call">START_CALL</a>. When your driver receives the START_CALL command, it must handle the command in a manner that enables your device to begin a call.</p>
-
-<p><strong>Intercom Call Notifications</strong> -  Includes a set  of notifications  that are sent from the device you are supporting, via your driver, to the Intercom Proxy. For example, when your driver receives a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-start-_call">START_CALL</a> command, it will send a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_accepted">CALL_ACCEPTED</a> notification to the Intercom Proxy.</p>
-
-<p><strong>Intercom Call Requests</strong> - These functions represent requests that are sent from your device driver to the Intercom Proxy to obtain various sets of call data. For example, when needed your driver may send the Intercom Call Request of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-requests-get_device_list">GET_DEVICE_LIST</a>. The GET_DEVICE_LIST request is a function for gathering information about other devices on the network that  might communicate with your device. Information returned includes data such as whether another device has a camera, does it include a display, etc.</p>
-
-<p><strong>Intercom State Commands</strong> - These functions consist of commands that impact the state of the device you are writing a driver for. For example, your driver may receive a State Command of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-commands-set_ringer_volume">SET_RINGER_VOLUME</a> from the Intercom Proxy. SET_RINGER_VOLUME will be sent with a numerical value indicating the new ringer volume level. Your driver will need to receive this state command and adjust the ringer volume on your device accordingly.</p>
-
-<p><strong>Intercom State Notifications</strong> - These functions consist of notifications    that are sent from the device you are supporting, via your driver, to the Intercom Proxy. For example, when your driver receives the State Command of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-commands-set_ringer_volume">SET_RINGER_VOLUME</a>, it needs to send a State Notification of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-notifications-ringer_volume_changed">RINGER_VOLUME_CHANGED</a> that includes the new ringer volume value.</p>
-
-<p><strong>Intercom State Requests</strong> - These functions  represent requests that are sent from your device driver to the Intercom Proxy for various sets of device state data. For example, when needed your driver may send the Intercom Call Request of <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-state-requests-get_state_list">GET_STATE_LIST</a>. This request returns the device states for all of the intercom endpoints in the project.</p>
-
-<p><strong>Intercom Call Group Requests</strong> - Currently, this consists of one function: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-group-requests-get_group_list">GET_GROUP_LIST</a> which can be used by your driver to obtain the group list of all of intercom call groups in the project.</p>
-
-<p><strong>Intercom Capabilities</strong> -  These <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-capabilities">functions </a> consist of Boolean XML elements that need to be defined in your driver. They represent functionality supported by your device such as do not disturb support, camera inclusion or its ability to play a door chime.</p>
-
-<p><strong>Intercom Events</strong> - <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-events">Events</a> are useful to define in your driver as they provide an opportunity for ComposerPro programming to occur based on them being fired. For example, if the speaker_volume_changed Event is defined in your driver and that Event fires when the speaker volume of your device changes, it would be possible (through programming in ComposerPro) to modify the speaker volume of other intercom devices in the project.</p>
-
-<p><strong>Intercom Conditionals</strong> - <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-conditionals">Conditionals</a> are useful to define in your driver as they also provide an opportunity for ComposerPro programming to occur based on their state. For example, if the In a Call conditional is set to true, the device that reported this conditional could be displayed as busy on Navigators. </p>
-
-<p><strong>Intercom Variables</strong> – The Intercom Proxy supports three Variables which can also be used in ComposerPro programming when defined in your driver. For example, the CALL_DURATION Variable can be assigned a time limit for a call, If that limit is exceeded, the call can be terminated.</p>
-<h1 id='intercom-proxy-best-practices'>Intercom Proxy Best Practices</h1>
-
-<h2 id='intercom-proxy-best-practices-overview'>Overview</h2>
-
-<p>The Intercom Proxy interface is defined in terms of Commands, Requests and Notifications, each of which are described in this section of the proxy and Protocol Guide.</p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands">Intercom Proxy Commands</a> are issued by a proxy consumer and may or may not result in an asynchronous notification in response.  Commands typically change state of the Intercom Proxy, or other components of the intercom architecture.</p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-requests">Intercom Proxy Requests</a> are issued from a proxy consumer with the expectation of getting a response from the protocol.  Requests do not change state of the intercom proxy or any other component of the architecture.  </p>
-
-<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications">Intercom Proxy Notifications</a> are sent from the intercom proxy to the intercom consumer asynchronously, and indicate a state change in the intercom proxy or one of its related architecture components.</p>
-
-<p>All communication through the proxy interface is asynchronous.  Even request responses, such as getting a list of known intercom devices, are returned asynchronously with respect to the request for that data.</p>
-
-<h2 id='intercom-proxy-best-practices-storing-session-ids'>Storing Session IDs</h2>
-
-<p>Many intercom API commands and requests require the sessionId as an input parameter. The value for this parameter is provided by the SIP Client on the device in response to issuing a <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-start-_call"><code>START_CALL</code></a> command or a physical button press event. </p>
-
-<p>This sessionId value is included in the resulting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-outgoing_call"><code>OUTGOING_CALL</code></a> or <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call"><code>INCOMING_CALL</code></a> notifications. The intercom proxy consumer is responsible for storing the sessionId returned with these notifications for use in subsequent commands and requests.</p>
-
-<h2 id='intercom-proxy-best-practices-using-the-remoteaor-property'>Using the RemoteAor Property</h2>
-
-<p>When the “remoteAor” parameter is used in a notification or command, the value is always the address of record of the other intercom device participating in an intercom call. </p>
-
-<p>For example, consider that intercom device A has address of record of “sip-user-A@192.168.1.123” and intercom device B has an address of record of “sip-user-B@192.168.1.123”. </p>
-
-<p>Intercom device A initiates a call with intercom device B, which results in an <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-incoming_call"><code>INCOMING_CALL</code></a> notification on intercom device B. When intercom device B issues the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-commands-accept_call"><code>ACCEPT_CALL</code></a> command, which takes remoteAor as a parameter, intercom device B should use “sip-user-A@192.168.1.123” (the address of record of intercom device A, or the initiator) as the value of this parameter. </p>
-
-<p>Likewise, when intercom device A sends the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#intercom-call-notifications-call_accepted"><code>CALL_ACCEPTED</code></a> notification, it will contain a remoteAor property that has the value of the address of record of intercom device B, or “sip-user-B@192.168.1.123”.</p>
+<p>There were no modifications to the Intercom Proxy in conjunction with O.S. Release 3.0.0.</p>
 <h1 id='intercom-proxy-settings'>Intercom Proxy Settings</h1>
 
 <h2 id='intercom-proxy-settings-exclude-from-navigator'>Exclude from Navigator</h2>
