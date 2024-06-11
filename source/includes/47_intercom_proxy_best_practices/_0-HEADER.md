@@ -1,1 +1,0 @@
-# Intercom Proxy Best Practices
