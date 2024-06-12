@@ -1,6 +1,11 @@
 
 This documentation includes content that details the functions that make up the Intercom Control Proxy which is supported in the DriverWorks Software Development Kit.
 
+Additional driver development documentation supporting intercom driver development can be found in the DriverWorks Fundamentals Guide. This includes:
+
+[Intercom Proxy Terminology][1]
+
+[Intercom Driver Development Best Practices][2]
 
 ## Proxies (Commands)
 
@@ -12,3 +17,6 @@ Your driver can facilitate communications with multiple types of proxies for a s
 ## Protocol (Notifications)
 
 Two similar devices may have the same functionality but utilize a very different command set.  A protocol driver provides the device-specific information needed to communicate with the Control4 system.  In the case of DriverWorks, the DriverWorks driver is the protocol driver.  When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.  In the case of DriverWorks, the DriverWorks driver is the protocol driver. When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.
+
+[1]:	https://musical-potato-93lyp9g.pages.github.io/#proxy-specific-information-intercom-proxy-terminology
+[2]:	https://musical-potato-93lyp9g.pages.github.io/#proxy-specific-information-intercom-proxy-best-practices
